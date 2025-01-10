@@ -1,0 +1,37 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorNegro);
+    padding: 40px;
+}
+
+.box {
+    background-color: var(--colorNaranja);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border: 2px solid var(--colorRojo);
+    padding: 40px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h2 {
+    font-family: var(--fontTitulos);
+    font-size: 10rem;
+    color: var(--colorRojo);
+}
+
+.container p {
+    color: var(--colorBlanco);
+    font-size: 2rem;
+}

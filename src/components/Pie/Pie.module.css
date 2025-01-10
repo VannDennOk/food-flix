@@ -1,0 +1,44 @@
+.pieContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorNegro);
+}
+
+.pieLogo {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid var(--colorRojo);
+}
+
+.pieLogo img {
+    width: 170px;
+}
+
+.pieInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 40px 16px;
+    flex-wrap: wrap;
+}
+
+.pieSocial {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.pieTexto {
+    text-align: center;
+    color: var(--colorBlanco);
+    font-size: 14px;
+}

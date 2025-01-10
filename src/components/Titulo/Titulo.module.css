@@ -1,0 +1,7 @@
+.texto {
+    font-family: var(--fontTitulos);
+    font-size: 8rem;
+    text-align: left;
+    color: var(--colorNegro);
+    padding: 40px;
+}

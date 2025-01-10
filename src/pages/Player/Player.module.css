@@ -1,0 +1,23 @@
+.container {
+    background-color: var(--colorNegro);
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+iframe {
+    width: 70%;
+    height: 90%;
+    background-color: var(--colorNegro);
+}
+
+.container h2 {
+    font-family: var(--fontTitulos);
+    font-size: 2rem;
+    color: var(--colorBlanco);
+}
