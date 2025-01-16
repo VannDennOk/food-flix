@@ -21,7 +21,7 @@ function Player() {
     if (!video) return <NotFound />
     return (
         <>
-            <Banner img="player"></Banner>
+            <Banner img="player" txt="Player"></Banner>
 
             <section className={styles.container}>
                 <h2>{video.titulo}</h2>

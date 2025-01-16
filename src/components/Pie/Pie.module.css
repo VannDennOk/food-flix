@@ -7,7 +7,7 @@
 }
 
 .pieLogo {
-    height: 80px;
+    height: 5rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -16,7 +16,7 @@
 }
 
 .pieLogo img {
-    width: 170px;
+    max-width: 10.5rem;
 }
 
 .pieInfo {
@@ -24,8 +24,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    padding: 0 40px 16px;
+    gap: 1rem;
+    padding: 0 2.5rem 1rem;
     flex-wrap: wrap;
 }
 
@@ -34,11 +34,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .pieTexto {
     text-align: center;
-    color: var(--colorBlanco);
-    font-size: 14px;
+    font-size: 0.875rem;
 }

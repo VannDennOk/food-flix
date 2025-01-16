@@ -6,6 +6,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    padding: 80px 40px;
+    gap: 2.5rem;
+    padding: 5rem 2.5rem;
 }

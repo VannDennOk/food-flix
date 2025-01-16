@@ -2,8 +2,13 @@ import { Link } from "react-router-dom"
 import styles from "./Cabecera.module.css"
 import logo from "./logo.svg"
 import CabeceraLinks from "components/CabeceraLinks"
+import BotonMostrarFormulario from "components/BotonMostrarFormulario"
+import { useFormulario } from "context/FormularioContext";
 
-function Cabecera() {
+const Cabecera = () => {
+
+    const { cambiarMostrar } = useFormulario();
+
     return (
         <header className={styles.cabecera}>
             <section className={styles.logoContainer}>
@@ -15,9 +20,9 @@ function Cabecera() {
                 <CabeceraLinks url="./">
                     Home
                 </CabeceraLinks>
-                <CabeceraLinks url="./NuevoVideo">
+                <BotonMostrarFormulario cambiarMostrar={cambiarMostrar}>
                     Nuevo Video
-                </CabeceraLinks>
+                </BotonMostrarFormulario>
                 <CabeceraLinks url="./Favoritos">
                     Favoritos
                 </CabeceraLinks>

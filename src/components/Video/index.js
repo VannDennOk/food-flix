@@ -1,19 +1,28 @@
 import { useFavoritosContext } from "context/Favoritos";
-import styles from "./Card.module.css";
+import styles from "./Video.module.css";
 import iconoFavoritoSelected from "./favorito-selected.svg";
 import iconoFavorito from "./favorito.svg";
-import iconoEliminar from "./eliminar.svg";
-import iconoEditar from "./editar.svg";
+import { BsTrashFill, BsPencilFill } from "react-icons/bs"; //<BsTrashFill /> <BsPencilFill />
 import { Link } from "react-router-dom";
 
-function Card({ id, imagen, titulo }) {
+const Video = (props) => {
+
+    const { titulo, categoria, imagen, link, descripcion, id } = props.datos
+    const { tag, color, sombra, eliminarVideo } = props
+
+
+    const colorBorde = {
+        borderColor: color,
+        boxShadow: sombra
+    }
 
     const { favorito, agregarFavorito } = useFavoritosContext();
     const isFavorito = favorito.some(fav => fav.id === id);
     const icon = isFavorito ? iconoFavoritoSelected : iconoFavorito;
 
     return (
-        <div className={styles.container}>
+        <div className={styles.containerShadow}>
+        <div className={styles.container} style={colorBorde}>
             <Link className={styles.link} to={`/${id}`}>
                 <img src={imagen} alt={titulo} className={styles.imagen} />
                 <h2>{titulo}</h2>
@@ -27,19 +36,18 @@ function Card({ id, imagen, titulo }) {
                 />
             </span>
             <div className={styles.cardFooter}>
-                <span>
-                    <img src={iconoEliminar} alt="Icono Eliminar" />
-                    <p>Eliminar</p>
+                <span className={styles.icon} onClick={() => eliminarVideo(id)}>
+                    <BsTrashFill /><p>Eliminar</p>
                 </span>
-                <span>
-                    <img src={iconoEditar} alt="Icono Editar" />
-                    <p>Editar</p>
+                <span className={styles.icon}>
+                    <BsPencilFill /><p>Editar</p>
                 </span>
             </div>
+        </div>
         </div>
     );
 };
 
-export default Card;
+export default Video;
 
 

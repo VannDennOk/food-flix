@@ -7,10 +7,11 @@
   --colorBlanco: #F5F5F6;
   --colorNegro: #111117;
   --colorGris: #9C9BA6;
-  /* --colorRojo: rgb(191, 4, 4); 
-     --colorNaranja: rgb(242, 159, 5);
-  */
-
+  --colorGrisOscuro: #2E2D3E;
+  --colorGrisMuyOscuro: #17161F;
+  --colorRojoSombra: rgba(191, 4, 4, 0.8);
+  --colorNaranjaSombra: rgba(242, 159, 5, 0.8);
+  --colorVerdeSombra: rgba(131, 166, 3, 0.8);
 }
 
 /* RESET*/
@@ -21,9 +22,26 @@
 }
 
 body {
-  margin: 0;
   font-family: var(--fontTexto);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--colorBlanco);
   background-color: var(--colorNegro);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* REDISEÑO DEL SCROLLBAR PARA EL BODY compatibilidad chrome/edge/ safari*/
+body::-webkit-scrollbar {
+  width: 0.9rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--colorGrisMuyOscuro);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--colorGrisOscuro);
+  border-radius: 20px;
+  border: 4px solid var(--colorGrisMuyOscuro);
 }

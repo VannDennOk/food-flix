@@ -3,17 +3,24 @@ import Container from "components/Container";
 import Pie from "components/Pie";
 import FavoritoProvider from "context/Favoritos";
 import { Outlet } from "react-router-dom";
+import { FormularioProvider } from "context/FormularioContext";
+
+
+
 
 function PaginaBase() {
     return (
         <main>
-            <Cabecera />
-            <FavoritoProvider>
-                <Container>
-                    <Outlet />
-                </Container>
-            </FavoritoProvider>
-            <Pie />
+            <FormularioProvider>
+                <Cabecera />
+                <FavoritoProvider>
+                    <Container>
+                        <Outlet />
+                    </Container>
+                </FavoritoProvider>
+
+                <Pie />
+            </FormularioProvider>
         </main>
     );
 };

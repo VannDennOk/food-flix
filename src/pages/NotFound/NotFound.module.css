@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--colorNegro);
-    padding: 40px;
+    padding: 2.5rem;
 }
 
 .box {
@@ -13,9 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 2.5rem;
     border: 2px solid var(--colorRojo);
-    padding: 40px;
+    padding: 2.5rem;
 }
 
 .texto {
@@ -32,6 +32,5 @@
 }
 
 .container p {
-    color: var(--colorBlanco);
     font-size: 2rem;
 }

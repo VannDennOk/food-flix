@@ -1,0 +1,23 @@
+.boton {
+    width: 100%;
+    min-width: 12.5rem;
+    height: 2.5rem;
+    background-color: var(--colorNegro);
+    color: var(--colorNaranja);
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    border: 2px solid var(--colorNaranja);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    flex-wrap: wrap;
+
+    font-family: var(--fontTexto);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.boton:hover {
+    color: var(--colorNegro);
+    background-color: var(--colorNaranja);
+    box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
+}

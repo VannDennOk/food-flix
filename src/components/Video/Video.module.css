@@ -1,25 +1,28 @@
+.containerShadow{
+    padding: 0.5rem;
+}
+
 .container {
-    width: 360px;
-    min-width: 360px;
+    width: 22.5rem;
+    min-width: 22.5rem;
     background-color: var(--colorNegro);
     border: 2px solid var(--colorRojo);
     border-radius: 12px;
-    box-shadow: 0px 0px 4px 1px rgba(191, 4, 4, 0.8);
     position: relative;
 }
 
 .container h2 {
-    height: 40px;
-    padding: 2px 8px 0;
+    height: 2.5rem;
+    padding: 0.125rem 0.5rem 0;
     background-color: var(--colorNegro);
     display: flex;
     align-items: center;
-    color: var(--colorBlanco);
     font-family: var(--fontTitulos);
-    font-size: 28px;
+    color: var(--colorBlanco);
+    font-size: 1.75rem;
     font-weight: 400;
     position: absolute;
-    top: 128px;
+    top: 8rem;
 }
 
 .imagen {
@@ -31,7 +34,7 @@
 
 .favorito {
     position: absolute;
-    right: 12px;
+    right: 1rem;
     top: 0;
     cursor: pointer;
 }
@@ -39,30 +42,24 @@
 .cardFooter {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 2rem;
 }
 
-.cardFooter span {
+.icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-}
-
-.cardFooter span p {
+    gap: 0.5rem;
+    font-size: 1rem;
     color: var(--colorBlanco);
-    font-size: 16px;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
 }
 
-.cardFooter span p:hover {
+.icon:hover{
     color: var(--colorNaranja);
-}
-
-.cardFooter span img {
-    width: 24px;
 }

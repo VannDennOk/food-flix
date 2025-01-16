@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     background-color: var(--colorNegro);
     border-bottom: 2px solid var(--colorRojo);
 }
 
 .logoContainer {
-    max-width: 170px;
+    max-width: 10.5rem;
 }
 
 .cabecera img {
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .cabecera a {
