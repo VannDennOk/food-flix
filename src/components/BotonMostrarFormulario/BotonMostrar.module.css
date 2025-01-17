@@ -27,3 +27,17 @@
         padding: 0.5rem;
     }        
 }
+
+@media (max-width: 575.98px) {
+    .boton {
+        border-radius: 0;
+        border: none;
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .boton:hover {
+        border: none;
+        box-shadow: none;
+    }
+}

@@ -5,6 +5,7 @@
     padding: 0 2.5rem;
     background-color: var(--colorNegro);
     border-bottom: 2px solid var(--colorRojo);
+    position: relative;
 }
 
 .logoContainer {
@@ -63,4 +64,40 @@
     .txt {
         display: none;
     }
+}
+
+@media (max-width: 575.98px) {
+
+    .cabecera {
+        justify-content: center;
+    }
+
+    .cabecera nav {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 5000;
+        width: 100%;
+        height: 4.5rem;
+        background-color: var(--colorNegro);
+        justify-content: center;
+        padding: 1rem;
+        border-top: 2px solid var(--colorRojo);
+    }
+
+    .iconHome {
+        font-size: 2.2rem;
+    }
+
+
+    .iconHeart {
+        font-size: 2rem;
+    }
+
+    .cabecera .activeLink {
+        color: var(--colorRojo);
+        border: none;
+        box-shadow: none;
+    }
+
 }

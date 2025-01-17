@@ -24,3 +24,17 @@
         padding: 0.5rem;
     }        
 }
+
+@media (max-width: 575.98px) {
+    .link {
+        border-radius: 0;
+        border: none;
+        padding: 0;
+    }
+    
+    .link:hover {
+        color: var(--colorNaranja);
+        border: none;
+        box-shadow: none;
+    }
+}

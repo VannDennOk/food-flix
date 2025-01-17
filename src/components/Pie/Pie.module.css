@@ -41,3 +41,19 @@
     text-align: center;
     font-size: 0.875rem;
 }
+
+@media (max-width: 575.98px) {
+    .pieLogo {
+        display: none;
+    }
+
+    .pieInfo {
+        padding-top: 2rem;
+        padding-bottom: 6.5rem;
+        border-top: 2px solid var(--colorGrisOscuro);
+    }
+
+
+
+
+}
