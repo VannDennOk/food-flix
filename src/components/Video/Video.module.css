@@ -4,7 +4,6 @@
 
 .container {
     width: 22.5rem;
-    min-width: 22.5rem;
     background-color: var(--colorNegro);
     border: 2px solid var(--colorRojo);
     border-radius: 12px;
@@ -62,4 +61,14 @@
 
 .icon:hover{
     color: var(--colorNaranja);
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        min-width: 18.75rem;
+    }
+
+    .container h2 {
+        top: 6rem;
+    }
 }

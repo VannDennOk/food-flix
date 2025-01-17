@@ -3,7 +3,15 @@
     height: 18.75rem;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: right;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+@media (max-width: 575.98px) {
+    .imagen {
+        height: 15rem;
+        justify-content: center;
+    }
 }

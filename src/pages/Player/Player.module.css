@@ -1,8 +1,8 @@
 .container {
     background-color: var(--colorNegro);
     width: 100%;
-    height: 100vh;
-    padding: 2.5rem;
+    height: 100%;
+    padding: 2.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,8 +11,11 @@
 }
 
 iframe {
-    width: 70%;
-    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 990px;
+    height: 556.88px;
     background-color: var(--colorNegro);
 }
 
@@ -21,4 +24,32 @@ iframe {
     font-size: 2rem;
     font-weight: 400;
     color: var(--colorBlanco);
+}
+
+@media (max-width: 991.98px) {
+    iframe {
+        width: 815px;
+        height: 458.44px;
+    }
+} 
+
+@media (max-width: 819.98px) {
+        iframe {
+            width: 560px;
+            height: 315px;
+        }
+}
+
+@media (max-width: 575.98px) {
+    iframe {
+        width: 420px;
+        height: 236.25px;
+    }
+}
+
+@media (max-width: 429.98px) {
+    iframe {
+        width: 300px;
+        height: 168.75px;
+    }
 }
