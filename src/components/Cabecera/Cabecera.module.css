@@ -25,3 +25,42 @@
 .cabecera a {
     text-decoration: none;
 }
+
+.cabecera .activeLink {
+    color: var(--colorRojo);
+    border: 2px solid var(--colorRojo);
+    box-shadow: 0px 0px 4px 1px var(--colorRojoSombra);
+    font-weight: 700;
+}
+
+.cabecera .activeButton {
+    display: block;
+}
+
+.span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.iconHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+    font-size: 1.15rem;
+}
+
+.iconHeart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+@media (max-width: 819.98px) {
+    .txt {
+        display: none;
+    }
+}

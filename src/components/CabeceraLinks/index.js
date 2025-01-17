@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import clsx from "clsx";
 import styles from "./CabeceraLinks.module.css";
 
-function CabeceraLinks({ url, children }) {
+function CabeceraLinks({ url, children, extraClass }) {
     return (
-        <Link to={url} className={styles.link}>
+        <Link to={url} className={clsx(styles.link, extraClass)}>
             {children}
         </Link>
     );

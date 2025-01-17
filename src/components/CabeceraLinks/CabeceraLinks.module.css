@@ -7,10 +7,20 @@
     border: 2px solid var(--colorBlanco);
     cursor: pointer;
     transition: all 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link:hover {
     color: var(--colorNaranja);
     border: 2px solid var(--colorNaranja);
     box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
+}
+
+@media (max-width: 819.98px) {
+    .link {
+        width: 2.5rem;
+        padding: 0.5rem;
+    }        
 }
