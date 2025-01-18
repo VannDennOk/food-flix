@@ -4,7 +4,7 @@ import logo from "./logo.svg";
 import CabeceraLinks from "components/CabeceraLinks";
 import BotonMostrarFormulario from "components/BotonMostrarFormulario";
 import { useFormulario } from "context/FormularioContext";
-import { BsFillHouseFill, BsPlusCircleFill , BsFillHeartFill  } from "react-icons/bs"; //<BsFillHouseFill /> <BsPlusCircleFill /> <BsFillHeartFill  />;
+import { BsFillHouseFill, BsPlusCircleFill , BsFillStarFill } from "react-icons/bs"; //<BsFillHouseFill /> <BsPlusCircleFill /> <BsFillHeartFill  />;
 
 const Cabecera = () => {
 
@@ -32,7 +32,7 @@ const Cabecera = () => {
                 <CabeceraLinks 
                     url="./Favoritos" 
                     extraClass={location.pathname === "/Favoritos" ? styles.activeLink : ""}>
-                    <span className={styles.span}><BsFillHeartFill className={styles.iconHeart}/><p className={styles.txt}>Favoritos</p></span>
+                    <span className={styles.span}><BsFillStarFill className={styles.iconStar}/><p className={styles.txt}>Favoritos</p></span>
                 </CabeceraLinks>
             </nav>
         </header>

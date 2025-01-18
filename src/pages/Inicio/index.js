@@ -5,6 +5,7 @@ import Formulario from "components/Formulario";
 import { useFormulario } from "context/FormularioContext";
 import Categoria from "components/Categoría";
 
+
 function Inicio() {
     const { mostrarFormulario } = useFormulario();
     const [videos, setVideos] = useState([{
@@ -169,6 +170,7 @@ function Inicio() {
                         registrarVideo={registrarVideo}
                     />
                 }
+                
 
 
                 <div className={styles.containerCategorias}>

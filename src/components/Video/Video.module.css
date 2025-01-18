@@ -63,6 +63,12 @@
     color: var(--colorNaranja);
 }
 
+@media (max-width: 991.98px) {
+    .icon:hover {
+        color: var(--colorBlanco);
+    }
+} 
+
 @media (max-width: 575.98px) {
     .container {
         min-width: 18.75rem;

@@ -6,7 +6,7 @@ function Hero({ img }) {
             style={{ backgroundImage: `url("img/hero-${img}.png")` }}>
             <section className={styles.texto}>
                 <h1>
-                    APRENDE LOS PLATOS MÁS RICOS
+                    APRENDÉ LOS PLATOS MÁS RICOS
                     CON LAS MEJORES <strong>VIDEO-RECETAS</strong>
                 </h1>
                 <h2>

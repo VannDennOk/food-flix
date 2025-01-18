@@ -45,19 +45,12 @@
     gap: 0.5rem;
 }
 
-.iconHome {
+.iconHome, .iconStar {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2px;
     font-size: 1.15rem;
-}
-
-.iconHeart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
 }
 
 @media (max-width: 819.98px) {
@@ -89,8 +82,7 @@
         font-size: 2.2rem;
     }
 
-
-    .iconHeart {
+    .iconStar {
         font-size: 2rem;
     }
 
