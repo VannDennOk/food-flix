@@ -4,7 +4,7 @@ import Video from "components/Video";
 const Categoria = (props) => {
 
     const { tag, color, sombra } = props.datos
-    const { videos, eliminarVideo } = props
+    const { videos, eliminarVideo, manejarEdicionVideo } = props
 
     const colorBG = {
         backgroundColor: color
@@ -23,6 +23,7 @@ const Categoria = (props) => {
                             color={color}
                             sombra={sombra}
                             eliminarVideo={eliminarVideo}
+                            manejarEdicionVideo={manejarEdicionVideo}
                         />)}
                 </div>
             </section>

@@ -1,13 +1,15 @@
 import { useState } from "react";
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 import Hero from "components/Hero";
 import Formulario from "components/Formulario";
 import { useFormulario } from "context/FormularioContext";
 import Categoria from "components/Categoría";
-
+import ModalEditar from "components/ModalEditar";
 
 function Inicio() {
     const { mostrarFormulario } = useFormulario();
+
+    //Lista de videos
     const [videos, setVideos] = useState([{
         id: 1,
         titulo: "Rigatoni alla Norma",
@@ -106,27 +108,7 @@ function Inicio() {
         imagen: "https://i.postimg.cc/Px2gG15z/ensalada-04-mariscos.png",
         link: "https://www.youtube.com/embed/mERYTifdTDQ?si=aSx4q3gtR-PG_BU0",
         descripcion: "Receta de ensalada a base de mariscos"
-    }])
-
-
-
-
-
-
-
-
-
-    //Registrar video
-    const registrarVideo = (video) => {
-        setVideos([...videos, video])
-    }
-
-    //Eliminar video
-    const eliminarVideo = (id) => {
-        console.log("eliminar video")
-        const nuevosVideos = videos.filter((video) => video.id !== id)
-        setVideos(nuevosVideos)
-    }
+    }]);
 
     //Lista de categorías
     const categorias = [
@@ -149,6 +131,33 @@ function Inicio() {
         }
     ]
 
+    //Registrar video
+    const registrarVideo = (video) => {
+        setVideos([...videos, video]);
+    };
+
+    //Eliminar video
+    const eliminarVideo = (id) => {
+        const nuevosVideos = videos.filter((video) => video.id !== id);
+        setVideos(nuevosVideos);
+    }
+
+    //Modal - Formulario Editar Video
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [videoAEditar, setVideoAEditar] = useState(null);
+
+    //Abre el modal y conecta el video a editar
+    const manejarEdicionVideo = (video) => {
+        setVideoAEditar(video);
+        setIsModalOpen(true);
+    };
+
+    //Cerrar el modal
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setVideoAEditar(null);
+    };
+
     /*     useEffect(() => {
             fetch("https://my-json-server.typicode.com/VannDennOk/food-flix-api/videos")
                 .then((response) => response.json())
@@ -157,32 +166,42 @@ function Inicio() {
                 });
         }, []);
      */
+    
+    const actualizarVideo = (videoActualizado) => {
+        setVideos(videos.map((v) => (v.id === videoActualizado.id ? videoActualizado : v)));
+        closeModal(); // Cerrar modal después de actualizar
+    };
 
     return (
         <div className={styles.container}>
-            <Hero img="home"></Hero>
-
+            <Hero img="home" />
             <section className={styles.containerContenido}>
-
-                {
-                    mostrarFormulario && <Formulario
+                {mostrarFormulario && 
+                    <Formulario
                         categorias={categorias.map((categoria) => categoria.tag)}
                         registrarVideo={registrarVideo}
                     />
                 }
-                
 
+                {isModalOpen && videoAEditar && (
+                    <ModalEditar
+                        video={videoAEditar}
+                        closeModal={closeModal}
+                        categorias={categorias.map((categoria) => categoria.tag)}
+                        actualizarVideo={actualizarVideo}
+                    />
+                )}
 
                 <div className={styles.containerCategorias}>
-                    {
-                        categorias.map((categoria) => <Categoria
+                    {categorias.map((categoria) => (
+                        <Categoria
                             datos={categoria}
                             key={categoria.tag}
-                            videos={videos.filter(video => video.categoria === categoria.tag)}
+                            videos={videos.filter((video) => video.categoria === categoria.tag)}
                             eliminarVideo={eliminarVideo}
+                            manejarEdicionVideo={manejarEdicionVideo}
                         />
-                        )
-                    }
+                    ))}
                     {/* {videos.map((video) => <Video {...video} key={video.id} />)} */}
                 </div>
             </section>

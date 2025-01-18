@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Video = (props) => {
 
     const { titulo, categoria, imagen, link, descripcion, id } = props.datos
-    const { tag, color, sombra, eliminarVideo } = props
+    const { tag, color, sombra, eliminarVideo, manejarEdicionVideo } = props
 
 
     const colorBorde = {
@@ -36,10 +36,19 @@ const Video = (props) => {
                 />
             </span>
             <div className={styles.cardFooter}>
-                <span className={styles.icon} onClick={() => eliminarVideo(id)}>
+                <span 
+                    className={styles.icon} 
+                    onClick={() => eliminarVideo(id)}
+                >
                     <BsTrashFill /><p>Eliminar</p>
                 </span>
-                <span className={styles.icon}>
+                <span 
+                    className={styles.icon}
+                    onClick={() => 
+                       {console.log("Editar clikeando, datos enciados:", {id, titulo, categoria, imagen, link, descripcion });
+                       manejarEdicionVideo({ id, titulo, categoria, imagen, link, descripcion });
+                       }}
+                >
                     <BsPencilFill /><p>Editar</p>
                 </span>
             </div>
