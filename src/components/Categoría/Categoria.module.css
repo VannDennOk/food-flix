@@ -51,6 +51,7 @@
     border: 4px solid var(--colorGrisMuyOscuro);
 }
 
+/* CELULAR / MOBILE */
 @media (max-width: 575.98px) {
     .container {
         padding: 2.5rem 0.5rem;

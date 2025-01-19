@@ -54,14 +54,16 @@
     font-size: 1.15rem;
 }
 
+/* oculta el texto de los botones en el formato tablet */
 @media (max-width: 991.98px) {
     .txt {
         display: none;
     }
 }
 
+/* cambia el nav de la cabecera a un bottom-nav-bar*/
+/* alinea el logo al centro de la cabecera */
 @media (max-width: 575.98px) {
-
     .cabecera {
         justify-content: center;
     }
@@ -92,5 +94,4 @@
         border: none;
         box-shadow: none;
     }
-
 }

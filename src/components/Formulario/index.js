@@ -18,6 +18,7 @@ const Formulario = (props) => {
 
   const { registrarVideo } = props
 
+  // maneja el envío para que no recargue la página + guarda los datos + crea nueva tarjeta de video
   const manejarEnvio = (e) => {
     e.preventDefault()
     let datosAEnviar = {
@@ -30,6 +31,7 @@ const Formulario = (props) => {
     registrarVideo(datosAEnviar)
   }
 
+   // limpia los campos del formulario
   const limpiarFormulario = () => {
     setTitulo("");
     setCategoria("");
@@ -42,8 +44,6 @@ const Formulario = (props) => {
     <div className={styles.overlay}>
       <section className={styles.container}>
         <BotonCerrarFormulario type="button" extraClass={styles.btnIconoCerrar}><BsFillXCircleFill /></BotonCerrarFormulario>
-
-
         <Banner img="nuevovideo" txt="Nuevo Video"></Banner>
         <form className={styles.formulario} onSubmit={manejarEnvio}>
           <h2>Completá el formulario para crear nuevas tarjetas de videos</h2>

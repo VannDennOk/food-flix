@@ -63,6 +63,8 @@
     color: var(--colorNaranja);
 }
 
+/* FORMATO CELULAR - Cambia las dimensiones para un mejor muestreo */
+
 @media (max-width: 575.98px) {
     .container {
         min-width: 18.75rem;

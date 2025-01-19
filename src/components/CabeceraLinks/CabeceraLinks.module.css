@@ -18,6 +18,8 @@
     box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
 }
 
+
+/* Cambia formato a solo ícono en tablet */
 @media (max-width: 991.98px) {
     .link {
         width: 2.5rem;
@@ -25,6 +27,7 @@
     }
 }
 
+/* Cambia lugar a bottonm-nav-bar y pierde el borde */
 @media (max-width: 575.98px) {
     .link {
         border-radius: 0;

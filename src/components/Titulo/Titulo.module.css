@@ -6,8 +6,8 @@
     padding: 2.5rem;
 }
 
+/* FORMATO TABLET - cambia dimensiones y agrega fondo para mejor lectura ante la superposición con imágenes*/
 @media (max-width: 991.98px) {
-
     .texto {
         width: 80%;
         font-size: 4rem;

@@ -57,6 +57,8 @@
     font-size: 0.875rem;
 }
 
+
+/* FORMATO CELULAR / MOBILE - Levanta un poco para dar lugar al nuevo bottom-nav-bar y pierde el logo para que no sea repetitivo */
 @media (max-width: 575.98px) {
     .pieLogo {
         display: none;

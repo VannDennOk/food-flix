@@ -40,8 +40,7 @@
     color: var(--colorRojo);
 }
 
-
-/* // Medium devices (tablets, less than 992px) */
+/* FORMATO TABLET */
 @media (max-width: 991.98px) {
     .texto {
         width: 50%;
@@ -57,6 +56,7 @@
     }
 }
 
+/* FORMATO TABLET 2 */
 @media (max-width: 819.98px) {
     .imagen {
         justify-content: center;
@@ -81,6 +81,7 @@
     }
 }
 
+/* CELULAR / MOBILE */
 @media (max-width: 575.98px) {
     .texto {
         width: 100%;
@@ -94,6 +95,7 @@
     }
 }
 
+/* FORMATO TABLET 2*/
 @media (max-width: 429.98px) {
     .texto h1 {
         font-size: 3rem;

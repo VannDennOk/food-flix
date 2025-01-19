@@ -100,6 +100,7 @@
     box-shadow: none;
 }
 
+/* Botones se alinean en vertical desde el formato tablet */
 @media (max-width: 991.98px) {
     .botones {
         flex-direction: column;
@@ -109,12 +110,9 @@
     }
 }
 
+/* CELULAR / MOBILE */
 @media (max-width: 575.98px) {
     .formulario {
         padding: 2.5rem 2rem;
-    }
-
-    .container .btnIconoCerrar:hover {
-        color: var(--colorBlanco);
     }
 }

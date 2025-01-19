@@ -29,8 +29,9 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
         actualizarVideo(videoActualizado);
     };
 
+     // No vacía los campos, restablece a los datos originales.
     const manejarLimpiar = () => {
-        // Restablecer los valores de los campos al estado original del video
+       
         setTitulo(video.titulo || "");
         setImagen(video.imagen || "");
         setVideoUrl(video.link || "");
@@ -95,7 +96,7 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
                             <button
                                 type="button"
                                 onClick={manejarLimpiar}
-                                className={styles.botonLimpiar} ><BsEraserFill />Borrar</button>
+                                className={styles.botonLimpiar} ><BsEraserFill />Restablecer</button>
                             <button type="button" onClick={closeModal} className={styles.botonCerrar}><BsFillXCircleFill />Cerrar</button>
                         </div>
                     </form>

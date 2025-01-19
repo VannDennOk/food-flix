@@ -2,7 +2,7 @@ import { useFavoritosContext } from "context/Favoritos";
 import styles from "./Video.module.css";
 import iconoFavoritoSelected from "./favorito-selected.svg";
 import iconoFavorito from "./favorito.svg";
-import { BsTrashFill, BsPencilFill } from "react-icons/bs"; //<BsTrashFill /> <BsPencilFill />
+import { BsTrashFill, BsPencilFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Video = (props) => {

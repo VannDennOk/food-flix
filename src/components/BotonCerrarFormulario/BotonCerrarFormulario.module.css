@@ -1,6 +1,5 @@
 .boton {
     width: 100%;
-    min-width: 12.5rem;
     height: 2.5rem;
     background-color: var(--colorNegro);
     padding: 0.5rem 1rem;
