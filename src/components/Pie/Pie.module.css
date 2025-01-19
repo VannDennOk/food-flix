@@ -57,12 +57,6 @@
     font-size: 0.875rem;
 }
 
-@media (max-width: 991.98px) {
-    .pieSocial a:hover {
-        color: var(--colorBlanco);
-    }
-}
-
 @media (max-width: 575.98px) {
     .pieLogo {
         display: none;

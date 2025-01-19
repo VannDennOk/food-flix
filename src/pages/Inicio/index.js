@@ -158,15 +158,6 @@ function Inicio() {
         setVideoAEditar(null);
     };
 
-    /*     useEffect(() => {
-            fetch("https://my-json-server.typicode.com/VannDennOk/food-flix-api/videos")
-                .then((response) => response.json())
-                .then((data) => {
-                    setVideos(data);
-                });
-        }, []);
-     */
-
     const actualizarVideo = (videoActualizado) => {
         setVideos(videos.map((v) => (v.id === videoActualizado.id ? videoActualizado : v)));
         closeModal(); // Cerrar modal después de actualizar
@@ -202,7 +193,6 @@ function Inicio() {
                             manejarEdicionVideo={manejarEdicionVideo}
                         />
                     ))}
-                    {/* {videos.map((video) => <Video {...video} key={video.id} />)} */}
                 </div>
             </section>
         </div>

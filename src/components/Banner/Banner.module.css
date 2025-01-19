@@ -9,7 +9,7 @@
     justify-content: flex-start;
 }
 
-@media (max-width: 819.98px) {
+@media (max-width: 991.98px) {
     .imagen {
         height: 15rem;
         justify-content: center;

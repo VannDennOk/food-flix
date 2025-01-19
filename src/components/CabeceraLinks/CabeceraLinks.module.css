@@ -19,15 +19,6 @@
 }
 
 @media (max-width: 991.98px) {
-    .link:hover {
-        color: var(--colorBlanco);
-        border: 2px solid var(--colorBlanco);
-        ;
-        box-shadow: none;
-    }
-}
-
-@media (max-width: 819.98px) {
     .link {
         width: 2.5rem;
         padding: 0.5rem;
@@ -42,7 +33,6 @@
     }
 
     .link:hover {
-        color: var(--colorNaranja);
         border: none;
         box-shadow: none;
     }

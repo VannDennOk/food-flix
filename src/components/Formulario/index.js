@@ -46,7 +46,7 @@ const Formulario = (props) => {
 
         <Banner img="nuevovideo" txt="Nuevo Video"></Banner>
         <form className={styles.formulario} onSubmit={manejarEnvio}>
-          <h2>Completá el formulario para crear una nuevas tarjetas de videos</h2>
+          <h2>Completá el formulario para crear nuevas tarjetas de videos</h2>
           <h3>* Los campos con asterísco son obligatorios</h3>
           <CampoTexto
             label="Título *"

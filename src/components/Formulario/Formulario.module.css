@@ -100,16 +100,18 @@
     box-shadow: none;
 }
 
-@media (max-width: 575.98px) {
-    .formulario {
-        padding: 2.5rem 2rem;
-    }
-
+@media (max-width: 991.98px) {
     .botones {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .formulario {
+        padding: 2.5rem 2rem;
     }
 
     .container .btnIconoCerrar:hover {

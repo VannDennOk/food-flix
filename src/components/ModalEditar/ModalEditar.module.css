@@ -200,22 +200,7 @@
         width: 90vw;
         height: 90vh;
     }
-
-    .btnClose:hover {
-        color: var(--colorBlanco);
-    }
-
-    .botonGuardar:hover {
-        box-shadow: none;
-    }
-
-    .botonLimpiar:hover,
-    .botonCerrar:hover {
-        box-shadow: none;
-    }
-}
-
-@media (max-width: 575.98px) {
+    
     .botones {
         flex-direction: column;
         align-items: center;

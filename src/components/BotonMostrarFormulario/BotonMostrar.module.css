@@ -22,15 +22,6 @@
 }
 
 @media (max-width: 991.98px) {
-    .boton:hover {
-        color: var(--colorBlanco);
-        border: 2px solid var(--colorBlanco);
-        ;
-        box-shadow: none;
-    }
-}
-
-@media (max-width: 819.98px) {
     .boton {
         width: 2.5rem;
         padding: 0.5rem;

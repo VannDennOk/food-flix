@@ -54,7 +54,7 @@
     font-size: 1.15rem;
 }
 
-@media (max-width: 819.98px) {
+@media (max-width: 991.98px) {
     .txt {
         display: none;
     }
