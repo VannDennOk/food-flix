@@ -31,13 +31,13 @@ iframe {
         width: 815px;
         height: 458.44px;
     }
-} 
+}
 
 @media (max-width: 819.98px) {
-        iframe {
-            width: 560px;
-            height: 315px;
-        }
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
 }
 
 @media (max-width: 575.98px) {

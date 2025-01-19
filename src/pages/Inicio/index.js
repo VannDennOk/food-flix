@@ -166,7 +166,7 @@ function Inicio() {
                 });
         }, []);
      */
-    
+
     const actualizarVideo = (videoActualizado) => {
         setVideos(videos.map((v) => (v.id === videoActualizado.id ? videoActualizado : v)));
         closeModal(); // Cerrar modal después de actualizar
@@ -176,7 +176,7 @@ function Inicio() {
         <div className={styles.container}>
             <Hero img="home" />
             <section className={styles.containerContenido}>
-                {mostrarFormulario && 
+                {mostrarFormulario &&
                     <Formulario
                         categorias={categorias.map((categoria) => categoria.tag)}
                         registrarVideo={registrarVideo}

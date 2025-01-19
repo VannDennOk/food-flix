@@ -3,7 +3,7 @@ import styles from "./Pie.module.css";
 import logo from "./logo.svg";
 import linkedin from "./linkedin.svg";
 import github from "./github.svg";
-import { FaLinkedin, FaGithub  } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Pie() {
     return (

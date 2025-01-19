@@ -41,7 +41,7 @@ const Formulario = (props) => {
   return (
     <div className={styles.overlay}>
       <section className={styles.container}>
-        <BotonCerrarFormulario type="button" extraClass={styles.btnIconoCerrar}><BsFillXCircleFill/></BotonCerrarFormulario>
+        <BotonCerrarFormulario type="button" extraClass={styles.btnIconoCerrar}><BsFillXCircleFill /></BotonCerrarFormulario>
 
 
         <Banner img="nuevovideo" txt="Nuevo Video"></Banner>
@@ -85,10 +85,10 @@ const Formulario = (props) => {
             setValor={setDescripcion}
           />
           <div className={styles.botones}>
-            <BotonGuardar><BsFillFloppyFill/>Guardar</BotonGuardar>
-            <BotonLimpiar type="button" onClick={limpiarFormulario}><BsEraserFill/>Borrar</BotonLimpiar>
-            <BotonCerrarFormulario type="button"><BsFillXCircleFill/>Cerrar</BotonCerrarFormulario>
-            
+            <BotonGuardar><BsFillFloppyFill />Guardar</BotonGuardar>
+            <BotonLimpiar type="button" onClick={limpiarFormulario}><BsEraserFill />Borrar</BotonLimpiar>
+            <BotonCerrarFormulario type="button"><BsFillXCircleFill />Cerrar</BotonCerrarFormulario>
+
           </div>
         </form>
       </section>

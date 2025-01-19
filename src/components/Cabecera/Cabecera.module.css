@@ -45,7 +45,8 @@
     gap: 0.5rem;
 }
 
-.iconHome, .iconStar {
+.iconHome,
+.iconStar {
     display: flex;
     align-items: center;
     justify-content: center;

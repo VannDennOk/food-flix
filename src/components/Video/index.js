@@ -22,37 +22,37 @@ const Video = (props) => {
 
     return (
         <div className={styles.containerShadow}>
-        <div className={styles.container} style={colorBorde}>
-            <Link className={styles.link} to={`/${id}`}>
-                <img src={imagen} alt={titulo} className={styles.imagen} />
-                <h2>{titulo}</h2>
-            </Link>
-            <span>
-                <img
-                    src={icon}
-                    alt="Icono Favorito"
-                    className={styles.favorito}
-                    onClick={() => agregarFavorito({ id, titulo, imagen })}
-                />
-            </span>
-            <div className={styles.cardFooter}>
-                <span 
-                    className={styles.icon} 
-                    onClick={() => eliminarVideo(id)}
-                >
-                    <BsTrashFill /><p>Eliminar</p>
+            <div className={styles.container} style={colorBorde}>
+                <Link className={styles.link} to={`/${id}`}>
+                    <img src={imagen} alt={titulo} className={styles.imagen} />
+                    <h2>{titulo}</h2>
+                </Link>
+                <span>
+                    <img
+                        src={icon}
+                        alt="Icono Favorito"
+                        className={styles.favorito}
+                        onClick={() => agregarFavorito({ id, titulo, imagen })}
+                    />
                 </span>
-                <span 
-                    className={styles.icon}
-                    onClick={() => 
-                       {console.log("Editar clikeando, datos enciados:", {id, titulo, categoria, imagen, link, descripcion });
-                       manejarEdicionVideo({ id, titulo, categoria, imagen, link, descripcion });
-                       }}
-                >
-                    <BsPencilFill /><p>Editar</p>
-                </span>
+                <div className={styles.cardFooter}>
+                    <span
+                        className={styles.icon}
+                        onClick={() => eliminarVideo(id)}
+                    >
+                        <BsTrashFill /><p>Eliminar</p>
+                    </span>
+                    <span
+                        className={styles.icon}
+                        onClick={() => {
+                            console.log("Editar clikeando, datos enciados:", { id, titulo, categoria, imagen, link, descripcion });
+                            manejarEdicionVideo({ id, titulo, categoria, imagen, link, descripcion });
+                        }}
+                    >
+                        <BsPencilFill /><p>Editar</p>
+                    </span>
+                </div>
             </div>
-        </div>
         </div>
     );
 };

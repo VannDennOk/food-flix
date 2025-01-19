@@ -21,16 +21,17 @@
 @media (max-width: 991.98px) {
     .link:hover {
         color: var(--colorBlanco);
-        border: 2px solid var(--colorBlanco);;
+        border: 2px solid var(--colorBlanco);
+        ;
         box-shadow: none;
     }
-} 
+}
 
 @media (max-width: 819.98px) {
     .link {
         width: 2.5rem;
         padding: 0.5rem;
-    }        
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -39,7 +40,7 @@
         border: none;
         padding: 0;
     }
-    
+
     .link:hover {
         color: var(--colorNaranja);
         border: none;

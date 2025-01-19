@@ -92,9 +92,9 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
 
                         <div className={styles.botones}>
                             <button type="submit" className={styles.botonGuardar} ><BsFillFloppyFill />Guardar</button>
-                            <button 
+                            <button
                                 type="button"
-                                onClick={manejarLimpiar} 
+                                onClick={manejarLimpiar}
                                 className={styles.botonLimpiar} ><BsEraserFill />Borrar</button>
                             <button type="button" onClick={closeModal} className={styles.botonCerrar}><BsFillXCircleFill />Cerrar</button>
                         </div>

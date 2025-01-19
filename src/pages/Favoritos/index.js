@@ -12,7 +12,7 @@ function Favoritos() {
             <Banner img="favoritos" txt="Favoritos"></Banner>
             <section className={styles.container}>
                 {favorito.length === 0 ? (
-                    <h2 className={styles.mensaje}><BsExclamationTriangleFill/>No se han seleccionado favoritos</h2>
+                    <h2 className={styles.mensaje}><BsExclamationTriangleFill />No se han seleccionado favoritos</h2>
                 ) : (
                     favorito.map((fav) => (
                         <Video

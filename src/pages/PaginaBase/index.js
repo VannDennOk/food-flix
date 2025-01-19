@@ -5,9 +5,6 @@ import FavoritoProvider from "context/Favoritos";
 import { Outlet } from "react-router-dom";
 import { FormularioProvider } from "context/FormularioContext";
 
-
-
-
 function PaginaBase() {
     return (
         <main>

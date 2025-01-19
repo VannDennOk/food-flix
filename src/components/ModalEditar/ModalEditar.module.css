@@ -1,4 +1,4 @@
-.overlay{
+.overlay {
     background-color: var(--colorNegroSombra);
     position: fixed;
     top: 0;
@@ -165,7 +165,8 @@
     box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
 }
 
-.botonLimpiar, .botonCerrar {
+.botonLimpiar,
+.botonCerrar {
     width: 100%;
     min-width: 12.5rem;
     height: 2.5rem;
@@ -189,7 +190,8 @@
     font-weight: 400;
 }
 
-.botonLimpiar:hover, .botonCerrar:hover {
+.botonLimpiar:hover,
+.botonCerrar:hover {
     box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
 }
 
@@ -207,7 +209,8 @@
         box-shadow: none;
     }
 
-    .botonLimpiar:hover, .botonCerrar:hover {
+    .botonLimpiar:hover,
+    .botonCerrar:hover {
         box-shadow: none;
     }
 }

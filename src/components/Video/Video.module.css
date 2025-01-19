@@ -1,4 +1,4 @@
-.containerShadow{
+.containerShadow {
     padding: 0.5rem;
 }
 
@@ -59,7 +59,7 @@
     transition: all 0.4s ease-in-out;
 }
 
-.icon:hover{
+.icon:hover {
     color: var(--colorNaranja);
 }
 
@@ -67,7 +67,7 @@
     .icon:hover {
         color: var(--colorBlanco);
     }
-} 
+}
 
 @media (max-width: 575.98px) {
     .container {

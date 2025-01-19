@@ -25,7 +25,7 @@
     font-family: var(--fontTitulos);
     font-size: 3.75rem;
     text-align: right;
-    text-wrap: balance; 
+    text-wrap: balance;
 }
 
 
@@ -42,19 +42,19 @@
 
 
 /* // Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
+@media (max-width: 991.98px) {
     .texto {
         width: 50%;
         gap: 1rem;
     }
-    
+
     .texto h1 {
         font-size: 3.5rem;
-    } 
+    }
 
     .texto h2 {
         font-size: 1.75rem;
-    }  
+    }
 }
 
 @media (max-width: 819.98px) {
@@ -74,11 +74,11 @@
 
     .texto h1 {
         text-align: center;
-    } 
+    }
 
     .texto h2 {
         text-align: center;
-    }  
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -97,9 +97,9 @@
 @media (max-width: 429.98px) {
     .texto h1 {
         font-size: 3rem;
-    } 
+    }
 
     .texto h2 {
         font-size: 1.5rem;
-    }  
+    }
 }
