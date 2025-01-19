@@ -1,3 +1,23 @@
+<h1>FOOD.FLIX :spaghetti: :heavy_plus_sign: :tv:</h1>
+<p>
+Proyecto realizado para el Challenge de La Formación en React de Alura Latam + Oracle.
+</p>
+<br>
+<p align="center"><img src="./public/portada.png" alt="vista del proyecto en distintos dispositivos" width="1000"></p>
+
+<h2>Estado :battery:</h2>
+<p align="left"><img src="https://img.shields.io/badge/STATUS-EN_DESARROLLO-0B8E36?style=flat-square"></p>
+<br>
+<p>
+:construction: README EN CONSTRUCCIÓN! :construction:
+</p>
+
+<h2>Licencia :warning:</h2>
+<a href="https://opensource.org/license/MIT"><img src="https://img.shields.io/badge/Licencia%20MIT-E30613?style=flat-square&link=https%3A%2F%2Fopensource.org%2Flicense%2FMIT"></a></p>
+
+----------------------------------------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
