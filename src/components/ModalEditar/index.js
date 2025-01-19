@@ -30,63 +30,65 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
     };
 
     return (
-        <dialog open className={styles.modal}>
-            <div className={styles.titulo}>
-                <h2>EDITAR VIDEO</h2>
-                <button type="button" onClick={closeModal} className={styles.btnClose}><BsFillXCircleFill/></button>
-            </div>
-            <div className={styles.scroll}>
-                <div className={styles.texto}>
-                    <h3>Editando: {video.titulo}</h3>
-                    <h3>Completá el formulario para editar la tarjeta de video</h3>
-                    <p>* Los campos con asterísco son requeridos</p>
+        <div className={styles.overlay}>
+            <dialog open className={styles.modal}>
+                <div className={styles.titulo}>
+                    <h2>EDITAR VIDEO</h2>
+                    <button type="button" onClick={closeModal} className={styles.btnClose}><BsFillXCircleFill /></button>
                 </div>
-                <form onSubmit={manejarGuardar} className={styles.formulario}>
-                    <CampoTexto
-                        label="Título *"
-                        placeholder="Editá el título del video"
-                        required
-                        valor={titulo}
-                        setValor={setTitulo}
-                    />
-
-                    <ListaOpciones
-                        label="Categoría *"
-                        placeholder="Seleccioná una categoría"
-                        valor={categoria}
-                        setCategoria={setCategoria}
-                        categorias={categorias}
-                    />
-
-                    <CampoTexto
-                        label="Imagen *"
-                        placeholder="Editá la URL de la imagen"
-                        required
-                        valor={imagen}
-                        setValor={setImagen}
-                    />
-
-                    <CampoTexto
-                        label="Video *"
-                        placeholder="Editá la URL del video"
-                        required
-                        valor={videoUrl}
-                        setValor={setVideoUrl}
-                    />
-                    <CampoTexto
-                        label="Descripción"
-                        placeholder="Editá la descripción del video"
-                        valor={descripcion}
-                        setValor={setDescripcion}
-                    />
-
-                    <div className={styles.botones}>
-                        <button type="submit" className={styles.botonGuardar} >Guardar</button>
-                        <button type="button" className={styles.botonLimpiar} >Limpiar</button>
+                <div className={styles.scroll}>
+                    <div className={styles.texto}>
+                        <h3>Completá el formulario para editar la tarjeta de video</h3>
+                        <p>* Los campos con asterísco son obligatorios</p>
+                        <p>Editando: {video.titulo}</p>
                     </div>
-                </form>
-            </div>
-        </dialog>
+                    <form onSubmit={manejarGuardar} className={styles.formulario}>
+                        <CampoTexto
+                            label="Título *"
+                            placeholder="Editá el título del video"
+                            required
+                            valor={titulo}
+                            setValor={setTitulo}
+                        />
+
+                        <ListaOpciones
+                            label="Categoría *"
+                            placeholder="Seleccioná una categoría"
+                            valor={categoria}
+                            setCategoria={setCategoria}
+                            categorias={categorias}
+                        />
+
+                        <CampoTexto
+                            label="Imagen *"
+                            placeholder="Editá la URL de la imagen"
+                            required
+                            valor={imagen}
+                            setValor={setImagen}
+                        />
+
+                        <CampoTexto
+                            label="Video *"
+                            placeholder="Editá la URL del video"
+                            required
+                            valor={videoUrl}
+                            setValor={setVideoUrl}
+                        />
+                        <CampoTexto
+                            label="Descripción"
+                            placeholder="Editá la descripción del video"
+                            valor={descripcion}
+                            setValor={setDescripcion}
+                        />
+
+                        <div className={styles.botones}>
+                            <button type="submit" className={styles.botonGuardar} >Guardar</button>
+                            <button type="button" className={styles.botonLimpiar} >Limpiar</button>
+                        </div>
+                    </form>
+                </div>
+            </dialog>
+        </div>
     );
 };
 

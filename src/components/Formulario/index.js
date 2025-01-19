@@ -18,7 +18,7 @@ const Formulario = (props) => {
   const { registrarVideo } = props
 
   const manejarEnvio = (e) => {
-    e.preventDefault() 
+    e.preventDefault()
     let datosAEnviar = {
       titulo,
       categoria,
@@ -26,67 +26,68 @@ const Formulario = (props) => {
       video,
       descripcion
     }
-    registrarVideo(datosAEnviar)      
+    registrarVideo(datosAEnviar)
   }
 
   const limpiarFormulario = () => {
-        setTitulo("");
-        setCategoria("");
-        setImagen("");
-        setVideo("");
-        setDescripcion("");
+    setTitulo("");
+    setCategoria("");
+    setImagen("");
+    setVideo("");
+    setDescripcion("");
   };
 
   return (
-    
-    <section className={styles.container}>
-      <Banner img="nuevovideo" txt="Nuevo Video"></Banner>
-      <form className={styles.formulario} onSubmit={manejarEnvio}>
-        <h2>Completá el formulario para crear una nueva tarjeta de video</h2>
-        <h3>* Los campos con asterísco son requeridos</h3>
-        <CampoTexto
-          label="Título *"
-          placeholder="Ingresá un título para el video"
-          required
-          valor={titulo}
-          setValor={setTitulo}
-        />
-        <ListaOpciones
-          label="Categoría *"
-          placeholder="Seleccioná una categoría para el video"
-          required
-          valor={categoria}
-          setCategoria={setCategoria}
-          categorias={props.categorias}
-        />
-        <CampoTexto
-          label="Imagen *"
-          placeholder="Ingresá la url de la imagen"
-          required
-          valor={imagen}
-          setValor={setImagen}
-        />
-        <CampoTexto
-          label="Video  *"
-          placeholder="Ingresá la url del video"
-          required
-          valor={video}
-          setValor={setVideo}
-        />
-        <CampoTexto
-          label="Descripción"
-          placeholder="Ingresá una descripción para el video"
-          required={false}
-          valor={descripcion}
-          setValor={setDescripcion}
-        />
-        <div className={styles.botones}>
-          <BotonGuardar>Guardar</BotonGuardar>
-          <BotonLimpiar type="button" onClick={limpiarFormulario}>Limpiar</BotonLimpiar>
-          <BotonCerrarFormulario type="button">Cerrar</BotonCerrarFormulario>
-        </div>
-      </form>
-    </section>
+    <div className={styles.overlay}>
+      <section className={styles.container}>
+        <Banner img="nuevovideo" txt="Nuevo Video"></Banner>
+        <form className={styles.formulario} onSubmit={manejarEnvio}>
+          <h2>Completá el formulario para crear una nuevas tarjetas de videos</h2>
+          <h3>* Los campos con asterísco son obligatorios</h3>
+          <CampoTexto
+            label="Título *"
+            placeholder="Ingresá un título para el video"
+            required
+            valor={titulo}
+            setValor={setTitulo}
+          />
+          <ListaOpciones
+            label="Categoría *"
+            placeholder="Seleccioná una categoría para el video"
+            required
+            valor={categoria}
+            setCategoria={setCategoria}
+            categorias={props.categorias}
+          />
+          <CampoTexto
+            label="Imagen *"
+            placeholder="Ingresá la url de la imagen"
+            required
+            valor={imagen}
+            setValor={setImagen}
+          />
+          <CampoTexto
+            label="Video  *"
+            placeholder="Ingresá la url del video"
+            required
+            valor={video}
+            setValor={setVideo}
+          />
+          <CampoTexto
+            label="Descripción"
+            placeholder="Ingresá una descripción para el video"
+            required={false}
+            valor={descripcion}
+            setValor={setDescripcion}
+          />
+          <div className={styles.botones}>
+            <BotonGuardar>Guardar</BotonGuardar>
+            <BotonLimpiar type="button" onClick={limpiarFormulario}>Limpiar</BotonLimpiar>
+            <BotonCerrarFormulario type="button">Cerrar</BotonCerrarFormulario>
+          </div>
+        </form>
+      </section>
+    </div>
   );
 };
 

@@ -1,12 +1,49 @@
-.container{
-    width: 100%;
-    background-color: var(--colorNegro);
-    position: absolute;
-    z-index: 4000;
+.overlay {
+    background-color: var(--colorNegroSombra);
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998;
 }
 
-.formulario{
+.container {
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--colorNegro);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    border: 2px solid var(--colorNaranja);
+    border-radius: 12px;
+}
+
+/* REDISEÑO DEL SCROLLBAR compatibilidad chrome/edge/ safari*/
+.container::-webkit-scrollbar {
+    width: 0.9rem;
+}
+
+.container::-webkit-scrollbar-track {
+    background: var(--colorGrisMuyOscuro);
+    border-radius: 20px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--colorGrisOscuro);
+    border-radius: 20px;
+    border: 4px solid var(--colorGrisMuyOscuro);
+}
+
+.formulario {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -39,9 +76,10 @@
 
 
 @media (max-width: 575.98px) {
-    .formulario{
+    .formulario {
         padding: 2.5rem 2rem;
     }
+
     .botones {
         flex-direction: column;
         align-items: center;
