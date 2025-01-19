@@ -36,12 +36,32 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    
+    color: var(--colorBlanco);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.pieSocial a {
+    color: var(--colorBlanco);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.pieSocial a:hover {
+    color: var(--colorNaranja);
 }
 
 .pieTexto {
     text-align: center;
     font-size: 0.875rem;
 }
+
+@media (max-width: 991.98px) {
+    .pieSocial a:hover {
+        color: var(--colorBlanco);
+    }
+} 
 
 @media (max-width: 575.98px) {
     .pieLogo {

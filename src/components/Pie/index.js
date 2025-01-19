@@ -3,6 +3,7 @@ import styles from "./Pie.module.css";
 import logo from "./logo.svg";
 import linkedin from "./linkedin.svg";
 import github from "./github.svg";
+import { FaLinkedin, FaGithub  } from "react-icons/fa";
 
 function Pie() {
     return (
@@ -16,8 +17,8 @@ function Pie() {
                     Desarrollado por Vanina Denegri para el Programa ONE de Alura Latam + Oracle | 2024
                 </p>
                 <span className={styles.pieSocial}>
-                    <a href="#"><img src={linkedin} alt="LinkedIn" /></a>
-                    <a href="#"><img src={github} alt="GitHub" /></a>
+                    <a href="https://www.linkedin.com/in/vaninadenegri/"><FaLinkedin /></a>
+                    <a href="https://github.com/VannDennOk"><FaGithub /></a>
                 </span>
 
             </section>
