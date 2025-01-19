@@ -20,6 +20,7 @@
     color: var(--colorBlanco);
     font-size: 1rem;
     font-weight: 400;
+    transition: all 0.4s ease-in-out;
 }
 
 .campoTexto input:focus {

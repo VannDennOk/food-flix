@@ -3,13 +3,11 @@
     min-width: 12.5rem;
     height: 2.5rem;
     background-color: var(--colorNegro);
-    color: var(--colorBlanco);
     padding: 0.5rem 1rem;
     border-radius: 1.25rem;
     border: 2px solid var(--colorNaranja);
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-    flex-wrap: wrap;
 
     color: var(--colorNaranja);
     font-family: var(--fontTexto);

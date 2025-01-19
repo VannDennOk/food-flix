@@ -48,6 +48,8 @@
     color: var(--colorBlanco);
 
     cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
 }
 
 .btnClose:hover {

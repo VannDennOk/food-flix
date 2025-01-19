@@ -6,6 +6,7 @@ import ListaOpciones from "components/ListaOpciones";
 import BotonGuardar from "components/BotonGuardar";
 import BotonLimpiar from "components/BotonLimpiar";
 import BotonCerrarFormulario from "components/BotonCerrarFormulario";
+import { BsFillXCircleFill } from "react-icons/bs";
 
 const Formulario = (props) => {
 
@@ -40,6 +41,9 @@ const Formulario = (props) => {
   return (
     <div className={styles.overlay}>
       <section className={styles.container}>
+        <BotonCerrarFormulario type="button" extraClass={styles.btnIconoCerrar}><BsFillXCircleFill/></BotonCerrarFormulario>
+
+
         <Banner img="nuevovideo" txt="Nuevo Video"></Banner>
         <form className={styles.formulario} onSubmit={manejarEnvio}>
           <h2>Completá el formulario para crear una nuevas tarjetas de videos</h2>
