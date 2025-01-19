@@ -9,3 +9,27 @@
     gap: 2.5rem;
     padding: 5rem 2.5rem;
 }
+
+.mensaje {
+    width: 70%;
+    height: 300px;
+    border: 2px solid var(--colorRojo);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 2.5rem;
+
+    color: var(--colorRojo);
+    font-size: 2.5rem;
+    font-weight: 400;
+    
+    text-align: center;
+    text-wrap: balance;
+
+    box-shadow: 0px 0px 4px 1px var(--colorRojoSombra);
+}

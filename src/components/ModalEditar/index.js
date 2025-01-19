@@ -29,6 +29,15 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
         actualizarVideo(videoActualizado);
     };
 
+    const manejarLimpiar = () => {
+        // Restablecer los valores de los campos al estado original del video
+        setTitulo(video.titulo || "");
+        setImagen(video.imagen || "");
+        setVideoUrl(video.link || "");
+        setDescripcion(video.descripcion || "");
+        setCategoria(video.categoria || "");
+    };
+
     return (
         <div className={styles.overlay}>
             <dialog open className={styles.modal}>
@@ -83,7 +92,10 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
 
                         <div className={styles.botones}>
                             <button type="submit" className={styles.botonGuardar} ><BsFillFloppyFill />Guardar</button>
-                            <button type="button" className={styles.botonLimpiar} ><BsEraserFill />Borrar</button>
+                            <button 
+                                type="button"
+                                onClick={manejarLimpiar} 
+                                className={styles.botonLimpiar} ><BsEraserFill />Borrar</button>
                             <button type="button" onClick={closeModal} className={styles.botonCerrar}><BsFillXCircleFill />Cerrar</button>
                         </div>
                     </form>
