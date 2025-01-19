@@ -66,18 +66,18 @@
 /* REDISEÑO DEL SCROLLBAR compatibilidad chrome/edge/ safari*/
 .scroll::-webkit-scrollbar {
     width: 0.9rem;
-  }
-  
-  .scroll::-webkit-scrollbar-track {
+}
+
+.scroll::-webkit-scrollbar-track {
     background: var(--colorGrisMuyOscuro);
     border-radius: 20px;
-  }
-  
-  .scroll::-webkit-scrollbar-thumb {
+}
+
+.scroll::-webkit-scrollbar-thumb {
     background-color: var(--colorGrisOscuro);
     border-radius: 20px;
     border: 4px solid var(--colorGrisMuyOscuro);
-  }
+}
 
 
 
