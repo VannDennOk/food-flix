@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./ModalEditar.module.css";
 import CampoTexto from "components/CampoTexto";
 import ListaOpciones from "components/ListaOpciones";
+import { BsFillXCircleFill } from "react-icons/bs";
 
 const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
 
@@ -14,25 +15,33 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
     const manejarGuardar = (e) => {
         e.preventDefault();
 
-    // Crear un objeto con los datos actualizados
-    const videoActualizado = {
-        ...video,
-        titulo,
-        imagen,
-        link: videoUrl,
-        descripcion,
-        categoria,
+        // Crear un objeto con los datos actualizados
+        const videoActualizado = {
+            ...video,
+            titulo,
+            imagen,
+            link: videoUrl,
+            descripcion,
+            categoria,
+        };
+
+        // Actualizar el video en la lista
+        actualizarVideo(videoActualizado);
     };
 
-    // Actualizar el video en la lista
-    actualizarVideo(videoActualizado);
-};
-
     return (
-            <dialog open className={styles.modal}>
-                <h2>Editando: {video.titulo}</h2>
-                <form onSubmit={manejarGuardar}>
-
+        <dialog open className={styles.modal}>
+            <div className={styles.titulo}>
+                <h2>EDITAR VIDEO</h2>
+                <button type="button" onClick={closeModal} className={styles.btnClose}><BsFillXCircleFill/></button>
+            </div>
+            <div className={styles.scroll}>
+                <div className={styles.texto}>
+                    <h3>Editando: {video.titulo}</h3>
+                    <h3>Completá el formulario para editar la tarjeta de video</h3>
+                    <p>* Los campos con asterísco son requeridos</p>
+                </div>
+                <form onSubmit={manejarGuardar} className={styles.formulario}>
                     <CampoTexto
                         label="Título *"
                         placeholder="Editá el título del video"
@@ -72,11 +81,12 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
                     />
 
                     <div className={styles.botones}>
-                        <button type="submit">Guardar</button>
-                        <button type="button" onClick={closeModal}>Cancelar</button>
+                        <button type="submit" className={styles.botonGuardar} >Guardar</button>
+                        <button type="button" className={styles.botonLimpiar} >Limpiar</button>
                     </div>
                 </form>
-            </dialog>
+            </div>
+        </dialog>
     );
 };
 

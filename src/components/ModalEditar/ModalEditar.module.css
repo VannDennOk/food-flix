@@ -1,10 +1,201 @@
 .modal {
+    width: 70vw;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    background: white;
-    padding: 20px;
-    border: 1px solid #ccc;
+
+    background: var(--colorNegro);
+    border: 2px solid var(--colorNaranja);
+    border-radius: 12px;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnClose {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+
+    font-size: 1.5rem;
+    color: var(--colorBlanco);
+
+    cursor: pointer;
+}
+
+.btnClose:hover {
+    color: var(--colorNaranja);
+}
+
+.modal h2 {
+    font-family: var(--fontTitulos);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--colorBlanco);
+}
+
+.scroll {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+/* REDISEÑO DEL SCROLLBAR compatibilidad chrome/edge/ safari*/
+.scroll::-webkit-scrollbar {
+    width: 0.9rem;
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    background: var(--colorGrisMuyOscuro);
+    border-radius: 20px;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: var(--colorGrisOscuro);
+    border-radius: 20px;
+    border: 4px solid var(--colorGrisMuyOscuro);
+  }
+
+
+
+
+
+
+
+.texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+
+    color: var(--colorBlanco);
+    font-family: var(--fontTexto);
+    font-size: 1rem;
+}
+
+.texto p {
+    color: var(--colorGris);
+    font-weight: 200;
+}
+
+.formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.formulario label {
+    color: var(--colorBlanco);
+}
+
+.botones {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.8rem 0;
+}
+
+.botonGuardar {
+    width: 100%;
+    min-width: 12.5rem;
+    height: 2.5rem;
+    background-color: var(--colorNaranja);
+    color: var(--colorNaranja);
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    border: 2px solid var(--colorNaranja);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    flex-wrap: wrap;
+
+    color: var(--colorNegro);
+    font-family: var(--fontTexto);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.botonGuardar:hover {
+    box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
+}
+
+.botonLimpiar {
+    width: 100%;
+    min-width: 12.5rem;
+    height: 2.5rem;
+    background-color: var(--colorNegro);
+    color: var(--colorBlanco);
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    border: 2px solid var(--colorNaranja);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    flex-wrap: wrap;
+
+    color: var(--colorNaranja);
+    font-family: var(--fontTexto);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.botonLimpiar:hover {
+    box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
+}
+
+@media (max-width: 991.98px) {
+    .modal {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .btnClose:hover {
+        color: var(--colorBlanco);
+    }
+
+    .botonGuardar:hover {
+        box-shadow: none;
+    }
+
+    .botonLimpiar:hover {
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 0;
+    }
 }
