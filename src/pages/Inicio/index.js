@@ -6,6 +6,8 @@ import { useFormulario } from "context/FormularioContext";
 import Categoria from "components/Categoría";
 import ModalEditar from "components/ModalEditar";
 
+//ESTAS EN LA RAMA MODALES
+
 function Inicio() {
     const { mostrarFormulario } = useFormulario();
 
