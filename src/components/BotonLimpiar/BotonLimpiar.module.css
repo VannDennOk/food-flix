@@ -15,6 +15,11 @@
     font-family: var(--fontTexto);
     font-size: 1rem;
     font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .boton:hover {

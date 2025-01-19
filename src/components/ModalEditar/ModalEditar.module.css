@@ -154,13 +154,18 @@
     font-family: var(--fontTexto);
     font-size: 1rem;
     font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .botonGuardar:hover {
     box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
 }
 
-.botonLimpiar {
+.botonLimpiar, .botonCerrar {
     width: 100%;
     min-width: 12.5rem;
     height: 2.5rem;
@@ -173,13 +178,18 @@
     transition: all 0.4s ease-in-out;
     flex-wrap: wrap;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
     color: var(--colorNaranja);
     font-family: var(--fontTexto);
     font-size: 1rem;
     font-weight: 400;
 }
 
-.botonLimpiar:hover {
+.botonLimpiar:hover, .botonCerrar:hover {
     box-shadow: 0px 0px 4px 1px var(--colorNaranjaSombra);
 }
 
@@ -197,7 +207,7 @@
         box-shadow: none;
     }
 
-    .botonLimpiar:hover {
+    .botonLimpiar:hover, .botonCerrar:hover {
         box-shadow: none;
     }
 }

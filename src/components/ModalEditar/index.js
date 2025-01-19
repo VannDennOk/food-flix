@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./ModalEditar.module.css";
 import CampoTexto from "components/CampoTexto";
 import ListaOpciones from "components/ListaOpciones";
-import { BsFillXCircleFill } from "react-icons/bs";
+import { BsFillXCircleFill, BsFillFloppyFill, BsEraserFill } from "react-icons/bs";
 
 const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
 
@@ -82,8 +82,9 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
                         />
 
                         <div className={styles.botones}>
-                            <button type="submit" className={styles.botonGuardar} >Guardar</button>
-                            <button type="button" className={styles.botonLimpiar} >Limpiar</button>
+                            <button type="submit" className={styles.botonGuardar} ><BsFillFloppyFill />Guardar</button>
+                            <button type="button" className={styles.botonLimpiar} ><BsEraserFill />Borrar</button>
+                            <button type="button" onClick={closeModal} className={styles.botonCerrar}><BsFillXCircleFill />Cerrar</button>
                         </div>
                     </form>
                 </div>

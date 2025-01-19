@@ -6,7 +6,7 @@ import ListaOpciones from "components/ListaOpciones";
 import BotonGuardar from "components/BotonGuardar";
 import BotonLimpiar from "components/BotonLimpiar";
 import BotonCerrarFormulario from "components/BotonCerrarFormulario";
-import { BsFillXCircleFill } from "react-icons/bs";
+import { BsFillXCircleFill, BsFillFloppyFill, BsEraserFill } from "react-icons/bs";
 
 const Formulario = (props) => {
 
@@ -85,9 +85,10 @@ const Formulario = (props) => {
             setValor={setDescripcion}
           />
           <div className={styles.botones}>
-            <BotonGuardar>Guardar</BotonGuardar>
-            <BotonLimpiar type="button" onClick={limpiarFormulario}>Limpiar</BotonLimpiar>
-            <BotonCerrarFormulario type="button">Cerrar</BotonCerrarFormulario>
+            <BotonGuardar><BsFillFloppyFill/>Guardar</BotonGuardar>
+            <BotonLimpiar type="button" onClick={limpiarFormulario}><BsEraserFill/>Borrar</BotonLimpiar>
+            <BotonCerrarFormulario type="button"><BsFillXCircleFill/>Cerrar</BotonCerrarFormulario>
+            
           </div>
         </form>
       </section>
