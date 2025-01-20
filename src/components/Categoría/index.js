@@ -1,34 +1,28 @@
 import styles from "./Categoria.module.css";
 import Video from "components/Video";
 
-const Categoria = (props) => {
+const Categoria = ({ datos, videos, eliminarVideo, manejarEdicionVideo }) => {
+    const { tag, color, sombra } = datos;
 
-    const { tag, color, sombra } = props.datos
-    const { videos, eliminarVideo, manejarEdicionVideo } = props
-
-    const colorBG = {
-        backgroundColor: color
-    }
-
-    return <>
-        {
-            videos.length > 0 &&
+    return (
+        videos.length > 0 && (
             <section className={styles.container}>
-                <h3 style={colorBG}>{tag}</h3>
+                <h3 style={{ backgroundColor: color }}>{tag}</h3>
                 <div className={styles.videoBox}>
-                    {
-                        videos.map((video, index) => <Video
+                    {videos.map((video) => (
+                        <Video
                             datos={video}
-                            key={index}
+                            key={video.id}
                             color={color}
                             sombra={sombra}
                             eliminarVideo={eliminarVideo}
                             manejarEdicionVideo={manejarEdicionVideo}
-                        />)}
+                        />
+                    ))}
                 </div>
             </section>
-        }
-    </>
+        )
+    );
 };
 
 export default Categoria;
