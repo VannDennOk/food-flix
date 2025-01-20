@@ -5,20 +5,29 @@ import iconoFavorito from "./favorito.svg";
 import { BsTrashFill, BsPencilFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Video = (props) => {
+const Video = ({ datos, tag, color, sombra, eliminarVideo, manejarEdicionVideo }) => {
 
-    const { titulo, categoria, imagen, link, descripcion, id } = props.datos
-    const { tag, color, sombra, eliminarVideo, manejarEdicionVideo } = props
-
+    const { id, titulo, categoria, imagen, link, descripcion } = datos;
+    const { favorito, agregarFavorito } = useFavoritosContext();
+    const isFavorito = favorito.some(fav => fav.id === id);
+    const icon = isFavorito ? iconoFavoritoSelected : iconoFavorito;
 
     const colorBorde = {
         borderColor: color,
         boxShadow: sombra
-    }
+    };
 
-    const { favorito, agregarFavorito } = useFavoritosContext();
-    const isFavorito = favorito.some(fav => fav.id === id);
-    const icon = isFavorito ? iconoFavoritoSelected : iconoFavorito;
+    const handleFavoritoClick = () => {
+        agregarFavorito({ id, titulo, imagen });
+    };
+
+    const handleEliminarClick = () => {
+        eliminarVideo(id);
+    };
+
+    const handleEditarClick = () => {
+        manejarEdicionVideo({ id, titulo, categoria, imagen, link, descripcion });
+    };
 
     return (
         <div className={styles.containerShadow}>
@@ -32,30 +41,25 @@ const Video = (props) => {
                         src={icon}
                         alt="Icono Favorito"
                         className={styles.favorito}
-                        onClick={() => agregarFavorito({ id, titulo, imagen })}
+                        onClick={handleFavoritoClick}
                     />
                 </span>
                 <div className={styles.cardFooter}>
                     <span
                         className={styles.icon}
-                        onClick={() => eliminarVideo(id)}
-                    >
+                        onClick={handleEliminarClick}>
                         <BsTrashFill /><p>Eliminar</p>
                     </span>
                     <span
                         className={styles.icon}
-                        onClick={() => {
-                            console.log("Editar clikeando, datos enciados:", { id, titulo, categoria, imagen, link, descripcion });
-                            manejarEdicionVideo({ id, titulo, categoria, imagen, link, descripcion });
-                        }}
-                    >
+                        onClick={handleEditarClick}>
                         <BsPencilFill /><p>Editar</p>
                     </span>
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default Video;
 
