@@ -8,54 +8,28 @@ import ModalEditar from "components/ModalEditar";
 import videosData from "data/videos.js";
 
 //ESTAS EN LA RAMA MAIN
+const categorias = [
+    { tag: "Pastas", color: "#BF0404", sombra: "0px 0px 4px 1px rgba(191, 4, 4, 0.7)"},
+    { tag: "Pizzas", color: "#F29F05", sombra: "0px 0px 4px 1px rgba(242, 159, 5, 0.7)"},
+    { tag: "Ensaladas", color: "#83A603", sombra: "0px 0px 4px 1px rgba(131, 166, 3, 0.7)"}
+];
 
 function Inicio() {
     const { mostrarFormulario } = useFormulario();
     const [videos, setVideos] = useState(videosData);
-
-    //Lista de categorías
-    const categorias = [
-        {
-            tag: "Pastas",
-            color: "#BF0404",
-            sombra: "0px 0px 4px 1px rgba(191, 4, 4, 0.7)"
-        },
-
-        {
-            tag: "Pizzas",
-            color: "#F29F05",
-            sombra: "0px 0px 4px 1px rgba(242, 159, 5, 0.7)"
-        },
-
-        {
-            tag: "Ensaladas",
-            color: "#83A603",
-            sombra: "0px 0px 4px 1px rgba(131, 166, 3, 0.7)"
-        }
-    ]
-
-    //Registrar video
-    const registrarVideo = (video) => {
-        setVideos([...videos, video]);
-    };
-
-    //Eliminar video
-    const eliminarVideo = (id) => {
-        const nuevosVideos = videos.filter((video) => video.id !== id);
-        setVideos(nuevosVideos);
-    }
-
-    //Modal - Formulario Editar Video
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [videoAEditar, setVideoAEditar] = useState(null);
+    const categoriasTags = categorias.map((categoria) => categoria.tag);
 
-    //Abre el modal y conecta el video a editar
+    const registrarVideo = (video) => setVideos([...videos, video]);
+
+    const eliminarVideo = (id) => setVideos(videos.filter((video) => video.id !== id));
+
     const manejarEdicionVideo = (video) => {
         setVideoAEditar(video);
         setIsModalOpen(true);
     };
 
-    //Cerrar el modal
     const closeModal = () => {
         setIsModalOpen(false);
         setVideoAEditar(null);
@@ -63,25 +37,25 @@ function Inicio() {
 
     const actualizarVideo = (videoActualizado) => {
         setVideos(videos.map((v) => (v.id === videoActualizado.id ? videoActualizado : v)));
-        closeModal(); // Cerrar modal después de actualizar
+        closeModal();
     };
 
     return (
         <div className={styles.container}>
             <Hero img="home" />
             <section className={styles.containerContenido}>
-                {mostrarFormulario &&
+                {mostrarFormulario && (
                     <Formulario
-                        categorias={categorias.map((categoria) => categoria.tag)}
+                        categorias={categoriasTags}
                         registrarVideo={registrarVideo}
                     />
-                }
+                )}
 
                 {isModalOpen && videoAEditar && (
                     <ModalEditar
                         video={videoAEditar}
                         closeModal={closeModal}
-                        categorias={categorias.map((categoria) => categoria.tag)}
+                        categorias={categoriasTags}
                         actualizarVideo={actualizarVideo}
                     />
                 )}
