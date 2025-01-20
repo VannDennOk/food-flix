@@ -1,0 +1,29 @@
+.dialogo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.dialogo p {
+    width: 90%;
+    font-family: var(--fontTexto);
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: var(--colorVerde);
+    text-wrap: balance;
+}
+
+.botonIcono{
+    font-size: 1rem;
+    color: var(--colorVerde);
+    cursor: pointer;
+}
+
+.botonIcono:hover{
+    color: var(--colorNaranja);
+}
+
+

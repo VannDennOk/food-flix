@@ -7,6 +7,7 @@ import ListaOpciones from "components/ListaOpciones";
 import BotonGuardar from "components/BotonGuardar";
 import BotonLimpiar from "components/BotonLimpiar";
 import BotonCerrarFormulario from "components/BotonCerrarFormulario";
+import DialogoConfirmacion from "components/DialogoConfirmacion";
 import { BsFillXCircleFill, BsFillFloppyFill, BsEraserFill } from "react-icons/bs";
 
 const Formulario = ({ registrarVideo, categorias }) => {
@@ -16,6 +17,7 @@ const Formulario = ({ registrarVideo, categorias }) => {
   const [imagen, setImagen] = useState("");
   const [video, setVideo] = useState("");
   const [descripcion, setDescripcion] = useState("");
+  const [mostrarDialogo, setMostrarDialogo] = useState(false);
 
   const manejarEnvio = (e) => {
     e.preventDefault();
@@ -31,6 +33,7 @@ const Formulario = ({ registrarVideo, categorias }) => {
 
     registrarVideo(nuevoVideo);
     limpiarFormulario();
+    setMostrarDialogo(true);
   };
 
   const limpiarFormulario = () => {
@@ -39,6 +42,10 @@ const Formulario = ({ registrarVideo, categorias }) => {
     setImagen("");
     setVideo("");
     setDescripcion("");
+  };
+
+  const cerrarDialogo = () => {
+    setMostrarDialogo(false);
   };
 
   return (
@@ -85,12 +92,19 @@ const Formulario = ({ registrarVideo, categorias }) => {
             valor={descripcion}
             setValor={setDescripcion}
           />
+
           <div className={styles.botones}>
+          <DialogoConfirmacion
+            mensaje="¡La tarjeta de video ha sido creada con éxito! Podés seguir agregando videos o cerrar este formulario."
+            abierto={mostrarDialogo}
+            onCerrar={cerrarDialogo}
+          />
             <BotonGuardar><BsFillFloppyFill />Guardar</BotonGuardar>
             <BotonLimpiar type="button" onClick={limpiarFormulario}><BsEraserFill />Borrar</BotonLimpiar>
             <BotonCerrarFormulario type="button"><BsFillXCircleFill />Cerrar</BotonCerrarFormulario>
           </div>
         </form>
+
       </section>
     </div>
   );
