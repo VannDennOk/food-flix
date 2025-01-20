@@ -4,13 +4,13 @@ import logo from "./logo.svg";
 import CabeceraLinks from "components/CabeceraLinks";
 import BotonMostrarFormulario from "components/BotonMostrarFormulario";
 import { useFormulario } from "context/FormularioContext";
-import { BsFillHouseFill, BsPlusCircleFill, BsFillStarFill } from "react-icons/bs"; //<BsFillHouseFill /> <BsPlusCircleFill /> <BsFillHeartFill  />;
+import { BsFillHouseFill, BsPlusCircleFill, BsFillStarFill } from "react-icons/bs";
 
 const Cabecera = () => {
-
     const { cambiarMostrar } = useFormulario();
     const location = useLocation();
-
+    const isActiveLink = (path) => location.pathname === path ? styles.activeLink : "";
+    const isActiveButton = (path) => location.pathname === path ? styles.activeButton : "";
     return (
         <header className={styles.cabecera}>
             <section className={styles.logoContainer}>
@@ -21,18 +21,27 @@ const Cabecera = () => {
             <nav>
                 <CabeceraLinks
                     url="./"
-                    extraClass={location.pathname === "/" ? styles.activeLink : ""}>
-                    <span className={styles.span}><BsFillHouseFill className={styles.iconHome} /><p className={styles.txt}>Home</p></span>
+                    extraClass={isActiveLink("/")}>
+                    <span className={styles.span}>
+                        <BsFillHouseFill className={styles.iconHome} />
+                        <p className={styles.txt}>Home</p>
+                    </span>
                 </CabeceraLinks>
                 <BotonMostrarFormulario
                     cambiarMostrar={cambiarMostrar}
-                    extraClass={location.pathname === "/" ? styles.activeButton : ""}>
-                    <span className={styles.span}><BsPlusCircleFill className={styles.icon} /><p className={styles.txt}>Nuevo Video</p></span>
+                    extraClass={isActiveButton("/")}>
+                    <span className={styles.span}>
+                        <BsPlusCircleFill className={styles.icon} />
+                        <p className={styles.txt}>Nuevo Video</p>
+                    </span>
                 </BotonMostrarFormulario>
                 <CabeceraLinks
                     url="./Favoritos"
-                    extraClass={location.pathname === "/Favoritos" ? styles.activeLink : ""}>
-                    <span className={styles.span}><BsFillStarFill className={styles.iconStar} /><p className={styles.txt}>Favoritos</p></span>
+                    extraClass={isActiveLink("/Favoritos")}>
+                    <span className={styles.span}>
+                        <BsFillStarFill className={styles.iconStar} />
+                        <p className={styles.txt}>Favoritos</p>
+                    </span>
                 </CabeceraLinks>
             </nav>
         </header>
