@@ -26,6 +26,6 @@ function Player() {
             </section>
         </>
     );
-};
+}
 
 export default Player;

@@ -9,17 +9,16 @@ function PaginaBase() {
     return (
         <main>
             <FormularioProvider>
-                <Cabecera />
                 <FavoritoProvider>
+                    <Cabecera />
                     <Container>
                         <Outlet />
                     </Container>
+                    <Pie />
                 </FavoritoProvider>
-
-                <Pie />
             </FormularioProvider>
         </main>
     );
-};
+}
 
 export default PaginaBase;

@@ -8,31 +8,22 @@ import BotonLimpiar from "components/BotonLimpiar";
 import BotonCerrarFormulario from "components/BotonCerrarFormulario";
 import { BsFillXCircleFill, BsFillFloppyFill, BsEraserFill } from "react-icons/bs";
 
-const Formulario = (props) => {
+const Formulario = ({ registrarVideo, categorias }) => {
 
-  const [titulo, setTitulo] = useState("")
-  const [categoria, setCategoria] = useState("")
-  const [imagen, setImagen] = useState("")
-  const [video, setVideo] = useState("")
-  const [descripcion, setDescripcion] = useState("")
+  const [titulo, setTitulo] = useState("");
+  const [categoria, setCategoria] = useState("");
+  const [imagen, setImagen] = useState("");
+  const [video, setVideo] = useState("");
+  const [descripcion, setDescripcion] = useState("");
 
-  const { registrarVideo } = props
-
-  // maneja el envío para que no recargue la página + guarda los datos + crea nueva tarjeta de video
   const manejarEnvio = (e) => {
-    e.preventDefault()
-    let datosAEnviar = {
-      titulo,
-      categoria,
-      imagen,
-      video,
-      descripcion
-    }
-    registrarVideo(datosAEnviar)
-  }
-
-   // limpia los campos del formulario
+    e.preventDefault();
+    registrarVideo({ titulo, categoria, imagen, video, descripcion });
+    limpiarFormulario();
+  };
+    
   const limpiarFormulario = () => {
+    setId("");
     setTitulo("");
     setCategoria("");
     setImagen("");
@@ -44,10 +35,17 @@ const Formulario = (props) => {
     <div className={styles.overlay}>
       <section className={styles.container}>
         <BotonCerrarFormulario type="button" extraClass={styles.btnIconoCerrar}><BsFillXCircleFill /></BotonCerrarFormulario>
-        <Banner img="nuevovideo" txt="Nuevo Video"></Banner>
+        <Banner img="nuevovideo" txt="Nuevo Video" />
         <form className={styles.formulario} onSubmit={manejarEnvio}>
           <h2>Completá el formulario para crear nuevas tarjetas de videos</h2>
           <h3>* Los campos con asterísco son obligatorios</h3>
+          <CampoTexto
+            label="ID *"
+            placeholder="Ingresá un ID"
+            required
+            valor={id}
+            setValor={setId}
+          />
           <CampoTexto
             label="Título *"
             placeholder="Ingresá un título para el video"
@@ -61,7 +59,7 @@ const Formulario = (props) => {
             required
             valor={categoria}
             setCategoria={setCategoria}
-            categorias={props.categorias}
+            categorias={categorias}
           />
           <CampoTexto
             label="Imagen *"
@@ -94,6 +92,6 @@ const Formulario = (props) => {
       </section>
     </div>
   );
-};
+}
 
 export default Formulario;

@@ -74,6 +74,6 @@ function Inicio() {
             </section>
         </div>
     );
-};
+}
 
 export default Inicio;

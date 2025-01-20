@@ -13,6 +13,6 @@ function NotFound() {
             </div>
         </section>
     );
-};
+}
 
 export default NotFound;
