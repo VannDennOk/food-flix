@@ -6,7 +6,7 @@ import videos from "data/videos.js";
 
 function Player() {
     const parametros = useParams();
-    const video = videos.find((video)=> video.id === Number(parametros.id));
+    const video = videos.find((video) => video.id === Number(parametros.id));
 
     if (!video) return <NotFound />
 
@@ -16,7 +16,6 @@ function Player() {
 
             <section className={styles.container}>
                 <h2>{video.titulo}</h2>
-                <h2>MODALES</h2>
                 <iframe
                     src={video.link}
                     title={video.titulo}
