@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import styles from "./Formulario.module.css";
 import Banner from "components/Banner";
 import CampoTexto from "components/CampoTexto";
@@ -18,12 +19,21 @@ const Formulario = ({ registrarVideo, categorias }) => {
 
   const manejarEnvio = (e) => {
     e.preventDefault();
-    registrarVideo({ titulo, categoria, imagen, video, descripcion });
+
+    const nuevoVideo = {
+      id: uuidv4(),
+      titulo,
+      categoria,
+      imagen,
+      video,
+      descripcion,
+    };
+
+    registrarVideo(nuevoVideo);
     limpiarFormulario();
   };
-    
+
   const limpiarFormulario = () => {
-    setId("");
     setTitulo("");
     setCategoria("");
     setImagen("");
@@ -39,13 +49,6 @@ const Formulario = ({ registrarVideo, categorias }) => {
         <form className={styles.formulario} onSubmit={manejarEnvio}>
           <h2>Completá el formulario para crear nuevas tarjetas de videos</h2>
           <h3>* Los campos con asterísco son obligatorios</h3>
-          <CampoTexto
-            label="ID *"
-            placeholder="Ingresá un ID"
-            required
-            valor={id}
-            setValor={setId}
-          />
           <CampoTexto
             label="Título *"
             placeholder="Ingresá un título para el video"
@@ -86,7 +89,6 @@ const Formulario = ({ registrarVideo, categorias }) => {
             <BotonGuardar><BsFillFloppyFill />Guardar</BotonGuardar>
             <BotonLimpiar type="button" onClick={limpiarFormulario}><BsEraserFill />Borrar</BotonLimpiar>
             <BotonCerrarFormulario type="button"><BsFillXCircleFill />Cerrar</BotonCerrarFormulario>
-
           </div>
         </form>
       </section>
