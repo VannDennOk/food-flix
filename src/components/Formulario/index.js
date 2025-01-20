@@ -50,7 +50,7 @@ const Formulario = ({ registrarVideo, categorias }) => {
           <h2>Completá el formulario para crear nuevas tarjetas de videos</h2>
           <h3>* Los campos con asterísco son obligatorios</h3>
           <CampoTexto
-            label="Título *"
+            label="Título"
             placeholder="Ingresá un título para el video"
             required
             valor={titulo}
@@ -65,14 +65,14 @@ const Formulario = ({ registrarVideo, categorias }) => {
             categorias={categorias}
           />
           <CampoTexto
-            label="Imagen *"
+            label="Imagen"
             placeholder="Ingresá la url de la imagen"
             required
             valor={imagen}
             setValor={setImagen}
           />
           <CampoTexto
-            label="Video  *"
+            label="Video"
             placeholder="Ingresá la url del video"
             required
             valor={video}

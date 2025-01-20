@@ -57,12 +57,14 @@
 .formulario h2 {
     font-size: 1rem;
     font-weight: 700;
+    text-wrap: balance;
 }
 
 .formulario h3 {
     font-size: 1rem;
     color: var(--colorGris);
     font-weight: 200;
+    text-wrap: balance;
 }
 
 .botones {

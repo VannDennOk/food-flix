@@ -1,19 +1,19 @@
 import styles from "./CampoTexto.module.css";
 
-function CampoTexto(props) {
-
-    const manejarCambio = (e) => {
-        props.setValor(e.target.value)
-    }
+const CampoTexto = ({ label, placeholder, valor, setValor, required = false }) => {
 
     return (
         <div className={styles.campoTexto}>
-            <label>{props.label}</label>
+            <label>
+                {label}
+                {required && <span> *</span>}
+            </label>
             <input
-                placeholder={props.placeholder}
-                required={props.required}
-                value={props.valor}
-                onChange={manejarCambio}
+                type="text"
+                placeholder={placeholder}
+                required={required}
+                value={valor}
+                onChange={(e) => setValor(e.target.value)}
             />
         </div>
     );

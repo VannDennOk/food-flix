@@ -48,7 +48,7 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
                     </div>
                     <form onSubmit={manejarGuardar} className={styles.formulario}>
                         <CampoTexto
-                            label="Título *"
+                            label="Título"
                             placeholder="Editá el título del video"
                             required
                             valor={titulo}
@@ -58,13 +58,14 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
                         <ListaOpciones
                             label="Categoría *"
                             placeholder="Seleccioná una categoría"
+                            required
                             valor={categoria}
                             setCategoria={setCategoria}
                             categorias={categorias}
                         />
 
                         <CampoTexto
-                            label="Imagen *"
+                            label="Imagen"
                             placeholder="Editá la URL de la imagen"
                             required
                             valor={imagen}
@@ -72,7 +73,7 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
                         />
 
                         <CampoTexto
-                            label="Video *"
+                            label="Video"
                             placeholder="Editá la URL del video"
                             required
                             valor={videoUrl}

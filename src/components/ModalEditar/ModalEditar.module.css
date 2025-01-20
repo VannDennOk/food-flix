@@ -61,6 +61,7 @@
     font-size: 2rem;
     font-weight: 400;
     color: var(--colorBlanco);
+    text-wrap: balance;
 }
 
 .scroll {
@@ -107,6 +108,7 @@
 .texto p {
     color: var(--colorGris);
     font-weight: 200;
+    text-wrap: balance;
 }
 
 .formulario {
