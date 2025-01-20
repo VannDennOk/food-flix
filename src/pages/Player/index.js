@@ -5,15 +5,14 @@ import NotFound from "pages/NotFound";
 import videos from "data/videos.js";
 
 function Player() {
-    const parametros = useParams();
-    const video = videos.find((video) => video.id === Number(parametros.id));
+    const { id } = useParams();
+    const video = videos.find((video) => video.id === Number(id));
 
-    if (!video) return <NotFound />
+    if (!video) return <NotFound />;
 
     return (
         <>
-            <Banner img="player" txt="Player"></Banner>
-
+            <Banner img="player" txt="Player" />
             <section className={styles.container}>
                 <h2>{video.titulo}</h2>
                 <iframe
