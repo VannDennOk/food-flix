@@ -16,6 +16,9 @@ Proyecto realizado para el Challenge de La Formación en React de Alura Latam + 
 <a href="https://opensource.org/license/MIT"><img src="https://img.shields.io/badge/Licencia%20MIT-E30613?style=flat-square&link=https%3A%2F%2Fopensource.org%2Flicense%2FMIT"></a></p>
 
 ----------------------------------------
+----------------------------------------
+----------------------------------------
+----------------------------------------
 
 
 # Getting Started with Create React App
