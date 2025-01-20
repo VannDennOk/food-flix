@@ -5,7 +5,6 @@ import ListaOpciones from "components/ListaOpciones";
 import { BsFillXCircleFill, BsFillFloppyFill, BsEraserFill } from "react-icons/bs";
 
 const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
-
     const [titulo, setTitulo] = useState(video.titulo || "");
     const [imagen, setImagen] = useState(video.imagen || "");
     const [videoUrl, setVideoUrl] = useState(video.link || "");
@@ -14,8 +13,6 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
 
     const manejarGuardar = (e) => {
         e.preventDefault();
-
-        // Crear un objeto con los datos actualizados
         const videoActualizado = {
             ...video,
             titulo,
@@ -24,14 +21,11 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
             descripcion,
             categoria,
         };
-
-        // Actualizar el video en la lista
         actualizarVideo(videoActualizado);
     };
 
-     // No vacía los campos, restablece a los datos originales.
+    // No vacía los campos, restablece a los datos originales.
     const manejarLimpiar = () => {
-       
         setTitulo(video.titulo || "");
         setImagen(video.imagen || "");
         setVideoUrl(video.link || "");
@@ -93,10 +87,7 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
 
                         <div className={styles.botones}>
                             <button type="submit" className={styles.botonGuardar} ><BsFillFloppyFill />Guardar</button>
-                            <button
-                                type="button"
-                                onClick={manejarLimpiar}
-                                className={styles.botonLimpiar} ><BsEraserFill />Restablecer</button>
+                            <button type="button" onClick={manejarLimpiar} className={styles.botonLimpiar} ><BsEraserFill />Restablecer</button>
                             <button type="button" onClick={closeModal} className={styles.botonCerrar}><BsFillXCircleFill />Cerrar</button>
                         </div>
                     </form>

@@ -1,9 +1,10 @@
 import styles from "./Hero.module.css";
 
 function Hero({ img }) {
+    const backgroundImageStyle = { backgroundImage: `url("img/hero-${img}.png")` };
+
     return (
-        <div className={styles.imagen}
-            style={{ backgroundImage: `url("img/hero-${img}.png")` }}>
+        <div className={styles.imagen} style={backgroundImageStyle}>
             <section className={styles.texto}>
                 <h1>
                     APRENDÉ LOS PLATOS MÁS RICOS
