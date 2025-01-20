@@ -1,13 +1,13 @@
 import styles from "./DialogoConfirmacion.module.css";
-import { BsCheckCircleFill, BsXCircleFill } from "react-icons/bs";
+import { BsCheckCircleFill } from "react-icons/bs";
 
-const DialogoConfirmacion = ({ mensaje, abierto, onCerrar }) => {
+const DialogoConfirmacion = ({ mensaje, abierto }) => {
     if (!abierto) return null;
 
     return (
-        <div open className={styles.dialogo}>
+        <div className={styles.dialogo}>
+            <BsCheckCircleFill className={styles.check} />
             <p>{mensaje}</p>
-            <BsXCircleFill className={styles.botonIcono} onClick={onCerrar}></BsXCircleFill>
         </div>
     );
 }

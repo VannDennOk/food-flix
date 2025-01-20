@@ -42,9 +42,6 @@ const Formulario = ({ registrarVideo, categorias }) => {
     setImagen("");
     setVideo("");
     setDescripcion("");
-  };
-
-  const cerrarDialogo = () => {
     setMostrarDialogo(false);
   };
 
@@ -94,11 +91,10 @@ const Formulario = ({ registrarVideo, categorias }) => {
           />
 
           <div className={styles.botones}>
-          <DialogoConfirmacion
-            mensaje="¡La tarjeta de video ha sido creada con éxito! Podés seguir agregando videos o cerrar este formulario."
-            abierto={mostrarDialogo}
-            onCerrar={cerrarDialogo}
-          />
+            <DialogoConfirmacion
+              mensaje="¡La tarjeta de video ha sido creada con éxito! Podés seguir agregando videos o cerrar este formulario."
+              abierto={mostrarDialogo}
+            />
             <BotonGuardar><BsFillFloppyFill />Guardar</BotonGuardar>
             <BotonLimpiar type="button" onClick={limpiarFormulario}><BsEraserFill />Borrar</BotonLimpiar>
             <BotonCerrarFormulario type="button"><BsFillXCircleFill />Cerrar</BotonCerrarFormulario>
