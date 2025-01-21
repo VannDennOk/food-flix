@@ -1,6 +1,7 @@
 .dialogo {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
@@ -14,6 +15,7 @@
 }
 
 .dialogo p {
+    text-align: center;
     text-wrap: balance;
 }
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import styles from "./Formulario.module.css";
 import Banner from "components/Banner";
-import CampoTexto from "components/CampoTexto";
+import Input from "components/Input";
 import ListaOpciones from "components/ListaOpciones";
 import BotonGuardar from "components/BotonGuardar";
 import BotonLimpiar from "components/BotonLimpiar";
@@ -53,36 +53,40 @@ const Formulario = ({ registrarVideo, categorias }) => {
         <form className={styles.formulario} onSubmit={manejarEnvio}>
           <h2>Completá el formulario para crear nuevas tarjetas de videos</h2>
           <h3>* Los campos con asterísco son obligatorios</h3>
-          <CampoTexto
+          <Input
+            tipo="text"
             label="Título"
             placeholder="Ingresá un título para el video"
-            required
+            required={true}
             valor={titulo}
             setValor={setTitulo}
           />
           <ListaOpciones
             label="Categoría *"
             placeholder="Seleccioná una categoría para el video"
-            required
+            required={true}
             valor={categoria}
             setCategoria={setCategoria}
             categorias={categorias}
           />
-          <CampoTexto
+          <Input
+            tipo="url"
             label="Imagen"
             placeholder="Ingresá la url de la imagen"
-            required
+            required={true}
             valor={imagen}
             setValor={setImagen}
           />
-          <CampoTexto
+          <Input
+            tipo="url"
             label="Video"
             placeholder="Ingresá la url del video"
-            required
+            required={true}
             valor={video}
             setValor={setVideo}
           />
-          <CampoTexto
+          <Input
+            tipo="texto"
             label="Descripción"
             placeholder="Ingresá una descripción para el video"
             required={false}
@@ -90,14 +94,16 @@ const Formulario = ({ registrarVideo, categorias }) => {
             setValor={setDescripcion}
           />
 
-          <div className={styles.botones}>
+          <div className={styles.botonesArea}>
             <DialogoConfirmacion
               mensaje="¡La tarjeta de video ha sido creada con éxito! Podés seguir agregando videos o cerrar este formulario."
               abierto={mostrarDialogo}
             />
-            <BotonGuardar><BsFillFloppyFill />Guardar</BotonGuardar>
-            <BotonLimpiar type="button" onClick={limpiarFormulario}><BsEraserFill />Borrar</BotonLimpiar>
-            <BotonCerrarFormulario type="button"><BsFillXCircleFill />Cerrar</BotonCerrarFormulario>
+            <div className={styles.botones}>
+              <BotonGuardar><BsFillFloppyFill />Guardar</BotonGuardar>
+              <BotonLimpiar type="button" onClick={limpiarFormulario}><BsEraserFill />Borrar</BotonLimpiar>
+              <BotonCerrarFormulario type="button"><BsFillXCircleFill />Cerrar</BotonCerrarFormulario>
+            </div>
           </div>
         </form>
 

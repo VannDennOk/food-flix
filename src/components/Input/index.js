@@ -1,6 +1,6 @@
-import styles from "./CampoTexto.module.css";
+import styles from "./Input.module.css";
 
-const CampoTexto = ({ label, placeholder, valor, setValor, required = false }) => {
+const Input = ({ label, placeholder, valor, setValor, required, tipo }) => {
 
     return (
         <div className={styles.campoTexto}>
@@ -9,7 +9,7 @@ const CampoTexto = ({ label, placeholder, valor, setValor, required = false }) =
                 {required && <span> *</span>}
             </label>
             <input
-                type="text"
+                type={tipo}
                 placeholder={placeholder}
                 required={required}
                 value={valor}
@@ -19,4 +19,4 @@ const CampoTexto = ({ label, placeholder, valor, setValor, required = false }) =
     );
 };
 
-export default CampoTexto;
+export default Input;

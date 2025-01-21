@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./ModalEditar.module.css";
-import CampoTexto from "components/CampoTexto";
+import Input from "components/Input";
 import ListaOpciones from "components/ListaOpciones";
 import { BsFillXCircleFill, BsFillFloppyFill, BsEraserFill } from "react-icons/bs";
 
@@ -47,41 +47,43 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
                         <p>Editando: {video.titulo}</p>
                     </div>
                     <form onSubmit={manejarGuardar} className={styles.formulario}>
-                        <CampoTexto
+                        <Input
+                            tipo="text"
                             label="Título"
                             placeholder="Editá el título del video"
-                            required
+                            required={true}
                             valor={titulo}
                             setValor={setTitulo}
                         />
-
                         <ListaOpciones
                             label="Categoría *"
                             placeholder="Seleccioná una categoría"
-                            required
+                            required={true}
                             valor={categoria}
                             setCategoria={setCategoria}
                             categorias={categorias}
                         />
-
-                        <CampoTexto
+                        <Input
+                            tipo="url"
                             label="Imagen"
                             placeholder="Editá la URL de la imagen"
-                            required
+                            required={true}
                             valor={imagen}
                             setValor={setImagen}
                         />
-
-                        <CampoTexto
+                        <Input
+                            tipo="url"
                             label="Video"
                             placeholder="Editá la URL del video"
-                            required
+                            required={true}
                             valor={videoUrl}
                             setValor={setVideoUrl}
                         />
-                        <CampoTexto
+                        <Input
+                            tipo="texto"
                             label="Descripción"
                             placeholder="Editá la descripción del video"
+                            required={false}
                             valor={descripcion}
                             setValor={setDescripcion}
                         />
