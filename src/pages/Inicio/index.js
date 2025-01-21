@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./index.module.css";
 import Hero from "components/Hero";
 import Formulario from "components/Formulario";
 import { useFormulario } from "context/FormularioContext";
 import Categoria from "components/Categoría";
 import ModalEditar from "components/ModalEditar";
-import videosData from "data/videos.js";
 
-//ESTAS EN LA RAMA MAIN
+//ESTAS EN LA RAMA JASONSERVER2
+
 const categorias = [
     { tag: "Pastas", color: "#BF0404", sombra: "0px 0px 4px 1px rgba(191, 4, 4, 0.7)"},
     { tag: "Pizzas", color: "#F29F05", sombra: "0px 0px 4px 1px rgba(242, 159, 5, 0.7)"},
@@ -16,11 +16,27 @@ const categorias = [
 
 function Inicio() {
     const { mostrarFormulario } = useFormulario();
-    const [videos, setVideos] = useState(videosData);
+    const [videos, setVideos] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [videoAEditar, setVideoAEditar] = useState(null);
     const categoriasTags = categorias.map((categoria) => categoria.tag);
 
+    useEffect(() => {
+        fetch("http://localhost:3002/videos")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Error al obtener los datos");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setVideos(data);
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+    }, []);
+    
     const registrarVideo = (video) => setVideos([...videos, video]);
 
     const eliminarVideo = (id) => setVideos(videos.filter((video) => video.id !== id));
