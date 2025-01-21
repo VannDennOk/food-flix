@@ -63,6 +63,30 @@
     color: var(--colorNaranja);
 }
 
+.ocultar {
+    display: none;
+}
+
+.ocultarReproducir {
+    display: none;
+}
+
+.mostrarReproducir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: var(--colorBlanco);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+}
+
+.mostrarReproducir:hover {
+    color: var(--colorNaranja);
+}
+
 /* FORMATO CELULAR - Cambia las dimensiones para un mejor muestreo */
 
 @media (max-width: 575.98px) {

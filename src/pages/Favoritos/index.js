@@ -27,6 +27,7 @@ function Favoritos() {
                                 descripcion: video.descripcion,
                                 id: video.id,
                             }}
+                            esFavoritos={true}
                         />
                     ))
                 )}

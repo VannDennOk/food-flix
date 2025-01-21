@@ -2,10 +2,10 @@ import { useFavoritosContext } from "context/Favoritos";
 import styles from "./Video.module.css";
 import iconoFavoritoSelected from "./favorito-selected.svg";
 import iconoFavorito from "./favorito.svg";
-import { BsTrashFill, BsPencilFill } from "react-icons/bs";
+import { BsTrashFill, BsPencilFill, BsFillPlayFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Video = ({ datos, tag, color, sombra, eliminarVideo, manejarEdicionVideo }) => {
+const Video = ({ datos, tag, color, sombra, eliminarVideo, manejarEdicionVideo, esFavoritos }) => {
 
     const { id, titulo, categoria, imagen, link, descripcion } = datos;
     const { favorito, agregarFavorito } = useFavoritosContext();
@@ -44,18 +44,23 @@ const Video = ({ datos, tag, color, sombra, eliminarVideo, manejarEdicionVideo }
                         onClick={handleFavoritoClick}
                     />
                 </span>
-                <div className={styles.cardFooter}>
-                    <span
-                        className={styles.icon}
-                        onClick={handleEliminarClick}>
-                        <BsTrashFill /><p>Eliminar</p>
-                    </span>
-                    <span
-                        className={styles.icon}
-                        onClick={handleEditarClick}>
-                        <BsPencilFill /><p>Editar</p>
-                    </span>
-                </div>
+                    <div className={styles.cardFooter}>
+                        <span
+                            className={`${styles.icon} ${esFavoritos ? styles.ocultar : ""}`}
+                            onClick={handleEliminarClick}>
+                            <BsTrashFill /><p>Eliminar</p>
+                        </span>
+                        <span
+                            className={`${styles.icon} ${esFavoritos ? styles.ocultar : ""}`}
+                            onClick={handleEditarClick}>
+                            <BsPencilFill /><p>Editar</p>
+                        </span>
+                        <span>
+                            <Link 
+                            className={`${styles.ocultarReproducir} ${esFavoritos ? styles.mostrarReproducir : ""}`}
+                            to={`/${id}`}><BsFillPlayFill />Reproducir</Link>
+                        </span>
+                    </div>
             </div>
         </div>
     );
