@@ -1,14 +1,21 @@
 import styles from "./ListaOpciones.module.css";
 
-function ListaOpciones({ label, valor, setCategoria, placeholder, categorias }) {
+function ListaOpciones({ label, valor, setCategoria, placeholder, categorias, required }) {
     const manejarCambio = (e) => {
         setCategoria(e.target.value)
     }
 
     return (
         <div className={styles.listaOpciones}>
-            <label>{label}</label>
-            <select className={styles.select} value={valor} onChange={manejarCambio}>
+            <label>
+                {label}
+                {required && <span> *</span>}
+            </label>
+            <select 
+                className={styles.select} 
+                value={valor} 
+                required={required}
+                onChange={manejarCambio}>
                 <option value="" disabled hidden>{placeholder}</option>
                 {categorias.map((categoria, index) => (
                     <option key={index} value={categoria}>

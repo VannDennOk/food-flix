@@ -62,7 +62,7 @@ const Formulario = ({ registrarVideo, categorias }) => {
             setValor={setTitulo}
           />
           <ListaOpciones
-            label="Categoría *"
+            label="Categoría"
             placeholder="Seleccioná una categoría para el video"
             required={true}
             valor={categoria}

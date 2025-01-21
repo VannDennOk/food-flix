@@ -56,7 +56,7 @@ const ModalEditar = ({ video, closeModal, categorias, actualizarVideo }) => {
                             setValor={setTitulo}
                         />
                         <ListaOpciones
-                            label="Categoría *"
+                            label="Categoría"
                             placeholder="Seleccioná una categoría"
                             required={true}
                             valor={categoria}
