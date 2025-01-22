@@ -2,7 +2,6 @@
 <p align="center"><img src="./public/portada.png" alt="vista del proyecto en distintos dispositivos" width="500"></p>
 <h2>Estado :battery:</h2>
 <p align="left"><img src="https://img.shields.io/badge/STATUS-EN_DESARROLLO-0B8E36?style=flat-square"></p>
-<br>
 <h2>Tecnologías :computer:</h2>
 <p align="left">
 <img src="https://img.shields.io/badge/HTML_5-E34F26?style=flat-square&logo=html5&logoColor=FFFFFF"> <img src="https://img.shields.io/badge/CSS_3-1572B6?style=flat-square&logo=css3&logoColor=FFFFFF"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=FFFFFF"> <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=ffffff"> <img src="https://img.shields.io/badge/json_server-000000?style=flat-square&logo=json&logoColor=ffffff"> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=ffffff">
@@ -30,7 +29,7 @@ El proyecto surge como solución al CHALLENGE ONE REACT de la Formación en Reac
 </p>
 <h3>Extras :muscle:</h3>
 <p>
-<br>:heavy_check_mark: selección y página de favoritos.
+:heavy_check_mark: selección y página de favoritos.
 <br>:heavy_check_mark: página para reproducción de los videos.
 </p>
 <h3>Puntos de mejora :arrow_up:</h3>
