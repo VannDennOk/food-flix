@@ -1,7 +1,7 @@
 {
     "videos": [
         {
-            "id": 1,
+            "id": "1",
             "titulo": "Rigatoni alla Norma",
             "categoria": "Pastas",
             "imagen": "https://i.postimg.cc/66vQtzp7/pasta-01-norma.png",
@@ -9,7 +9,7 @@
             "descripcion": "Receta de pasta a la Norma"
         },
         {
-            "id": 2,
+            "id": "2",
             "titulo": "Fettuccine peperonata",
             "categoria": "Pastas",
             "imagen": "https://i.postimg.cc/C1ZxZsCQ/pasta-02-peperonata.png",
@@ -17,7 +17,7 @@
             "descripcion": "Receta de pasta a la peperonata"
         },
         {
-            "id": 3,
+            "id": "3",
             "titulo": "Rigatoni ai funghi",
             "categoria": "Pastas",
             "imagen": "https://i.postimg.cc/YSDSqsFF/pasta-03-funghi.png",
@@ -25,7 +25,7 @@
             "descripcion": "Receta de pasta con hongos"
         },
         {
-            "id": 4,
+            "id": "4",
             "titulo": "Pizza funghi",
             "categoria": "Pizzas",
             "imagen": "https://i.postimg.cc/sXtD5GwD/pizza-01-funghi.png",
@@ -33,7 +33,7 @@
             "descripcion": "Receta de pizza de hongos"
         },
         {
-            "id": 5,
+            "id": "5",
             "titulo": "Pizza napolitana",
             "categoria": "Pizzas",
             "imagen": "https://i.postimg.cc/3w1Kfb16/pizza-02-napolitana.png",
@@ -41,7 +41,7 @@
             "descripcion": "Receta de pizza de napolitana"
         },
         {
-            "id": 6,
+            "id": "6",
             "titulo": "Pizza carbonara",
             "categoria": "Pizzas",
             "imagen": "https://i.postimg.cc/VN86Vt8S/pizza-03-carbonara.png",
@@ -49,7 +49,7 @@
             "descripcion": "Receta de pizza a la carbonara"
         },
         {
-            "id": 7,
+            "id": "7",
             "titulo": "Ensalada de rabanitos",
             "categoria": "Ensaladas",
             "imagen": "https://i.postimg.cc/FHczpZ25/ensalada-01-rabanitos.png",
@@ -57,7 +57,7 @@
             "descripcion": "Receta de ensalada a base de rabanitos"
         },
         {
-            "id": 8,
+            "id": "8",
             "titulo": "Ensalada de palta",
             "categoria": "Ensaladas",
             "imagen": "https://i.postimg.cc/g0HJF0zg/ensalada-02-palta.png",
@@ -65,7 +65,7 @@
             "descripcion": "Receta de ensalada a base de palta"
         },
         {
-            "id": 9,
+            "id": "9",
             "titulo": "Ensalada de pepinos",
             "categoria": "Ensaladas",
             "imagen": "https://i.postimg.cc/yYDkgBjN/ensalada-03-pepinos.png",
@@ -73,7 +73,7 @@
             "descripcion": "Receta de ensalada a base de pepinos"
         },
         {
-            "id": 10,
+            "id": "10",
             "titulo": "Spaghetti verdi",
             "categoria": "Pastas",
             "imagen": "https://i.postimg.cc/L5WG5RfJ/pasta-04-verde.png",
@@ -82,7 +82,7 @@
         },
     
         {
-            "id": 11,
+            "id": "11",
             "titulo": "Pizza Pepperoni",
             "categoria": "Pizzas",
             "imagen": "https://i.postimg.cc/QCCRjVBL/pizza-04-pepperoni.png",
@@ -91,7 +91,7 @@
         },
     
         {
-            "id": 12,
+            "id": "12",
             "titulo": "Ensalada de mariscos",
             "categoria": "Ensaladas",
             "imagen": "https://i.postimg.cc/Px2gG15z/ensalada-04-mariscos.png",
