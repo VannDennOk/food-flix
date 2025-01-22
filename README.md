@@ -12,11 +12,22 @@ Proyecto realizado para el Challenge de La Formación en React de Alura Latam + 
 :construction: README EN CONSTRUCCIÓN! :construction:
 </p>
 
-<h2>Licencia :warning:</h2>
-<a href="https://opensource.org/license/MIT"><img src="https://img.shields.io/badge/Licencia%20MIT-E30613?style=flat-square&link=https%3A%2F%2Fopensource.org%2Flicense%2FMIT"></a></p>
+<h2>Branches</h2>
+
+Branch main: no tiene persistencia de datos. Al recargar la página se limpia y vuelven a cargarse se los videos prestablecidos. Puede probarse en vercel.
+
+Branch jsonserver2: conectado con JSON-SERVER para simulara una API (fake API). Debe descargarse y conectar json-server en el puerto 3002:
+
+npm install json-server
+npx json-server --watch database.json --port 3000
+
 
 ----------------------------------------
 ----------------------------------------
+
+<h2>Licencia :warning:</h2>
+<a href="https://opensource.org/license/MIT"><img src="https://img.shields.io/badge/Licencia%20MIT-E30613?style=flat-square&link=https%3A%2F%2Fopensource.org%2Flicense%2FMIT"></a></p>
+
 ----------------------------------------
 ----------------------------------------
 
