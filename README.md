@@ -1,4 +1,4 @@
-<h1>FOOD.FLIX :spaghetti: :heavy_plus_sign: :tv:</h1>
+<h1>FOOD.FLIX :spaghetti: :heavy_plus_sign: :tv:   </h1>
 <p align="center"><img src="./public/portada.png" alt="vista del proyecto en distintos dispositivos" width="500"></p>
 <h2>Estado :battery:</h2>
 <p align="left"><img src="https://img.shields.io/badge/STATUS-EN_DESARROLLO-0B8E36?style=flat-square"></p>
