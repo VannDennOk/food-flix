@@ -69,7 +69,7 @@ npx json-server --watch src/data/db.json --port 3002
 <br>
 <a href="https://github.com/VannDennOk/food-flix.git"><img src="https://img.shields.io/badge/Repositorio-181717?style=flat-square&logo=github&logoColor=ffffff"></a>
    <a href="https://food-flix-by-vd.vercel.app/"><img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=ffffff"></a>
-   <a href="#"><img src="https://img.shields.io/badge/Dise%C3%B1o-F24E1E?style=flat-square&logo=figma&logoColor=ffffff"></a>
+   <a href="https://www.figma.com/design/byifz2Hy16VJMdblBXyju0/New-AluraFlix-by-Vanina-Denegri?node-id=34315-4380&t=PKdLnuYO3DpzgYkD-1"><img src="https://img.shields.io/badge/Dise%C3%B1o-F24E1E?style=flat-square&logo=figma&logoColor=ffffff"></a>
 </p>
 
 <h2>Autoría :woman:</h2>
